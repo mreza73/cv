@@ -32,7 +32,6 @@
             padding: 40px 20px;
         }
 
-        /* Header Styles */
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -68,16 +67,10 @@
             text-decoration: none;
         }
 
-        /* Main Layout */
         .resume-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
-        }
-
-        /* Experience Section */
-        .experience-section {
-            margin-bottom: 40px;
         }
 
         .section-title {
@@ -122,10 +115,8 @@
 
         .experience-list li {
             margin-bottom: 12px;
-            position: relative;
         }
 
-        /* Certifications Section */
         .certifications-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -156,27 +147,18 @@
             border-top: 1px solid #eee;
         }
 
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .skill-tag {
+            display: inline-block;
+            background: var(--light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
             .resume-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .header {
-                text-align: left;
             }
         }
     </style>
@@ -205,8 +187,7 @@
 
         <div class="resume-grid">
             <main class="main-content">
-                <!-- Professional Experience -->
-                <section class="experience-section">
+                <section>
                     <h2 class="section-title">Professional Experience</h2>
 
                     <div class="experience-item">
@@ -219,14 +200,13 @@
                         </div>
                         <div class="location">Kish Airport, Iran</div>
                         <ul class="experience-list">
-                            <li>Led $5M+ airport infrastructure project for new terminal</li>
-                            <li>Integrated Siemens BMS with Cisco network infrastructure</li>
-                            <li>Managed team of 25+ technicians and engineers</li>
-                            <li>Implemented systems: Siemens BMS, Cisco Network, Bosch Security</li>
+                            <li>Led implementation of critical low current systems for new terminal at Kish International Airport</li>
+                            <li>Integrated complex technologies including Siemens BMS, Cisco network infrastructure, and Bosch security systems</li>
+                            <li>Managed team of 15+ technicians for system commissioning</li>
+                            <li>Reduced project downtime by 30% through optimized workflows</li>
                         </ul>
                     </div>
 
-                    <!-- Honar Shahr Aftab Experience -->
                     <div class="experience-item">
                         <div class="company-header">
                             <div>
@@ -243,62 +223,129 @@
                         </ul>
                     </div>
 
-                    <!-- Add other experiences following the same pattern -->
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">IRITCO</h3>
+                                <div class="position">Site Manager</div>
+                            </div>
+                            <div class="date-range">May 2020 - May 2022</div>
+                        </div>
+                        <div class="location">Kish International Airport Project</div>
+                        <ul class="experience-list">
+                            <li>Managed full-cycle IT infrastructure deployment</li>
+                            <li>Designed data center with SAN storage and UTM systems</li>
+                            <li>Achieved 99.9% uptime through optimized monitoring</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Kishwood Industries</h3>
+                                <div class="position">IT Support Specialist</div>
+                            </div>
+                            <div class="date-range">Feb 2013 - Feb 2019</div>
+                        </div>
+                        <div class="location">Kish Island, Iran</div>
+                        <ul class="experience-list">
+                            <li>Managed enterprise IT infrastructure</li>
+                            <li>Implemented first cybersecurity protocols</li>
+                            <li>Reduced system outages by 40%</li>
+                        </ul>
+                    </div>
                 </section>
             </main>
 
             <aside class="sidebar">
-                <!-- Certifications -->
-                <section class="experience-section">
-                    <h2 class="section-title">Certifications</h2>
+                <section>
+                    <h2 class="section-title">Licenses & Certifications</h2>
                     <div class="certifications-grid">
-                        <!-- Career Essentials -->
                         <div class="certification-card">
-                            <h3 class="cert-title">Career Essentials in Cybersecurity</h3>
-                            <div class="cert-issuer">Microsoft & LinkedIn</div>
+                            <h3 class="cert-title">IPv6 Fundamentals - Analyst</h3>
+                            <div class="cert-issuer">RIPE NCC</div>
                             <div class="cert-details">
-                                <div>Issued: Sep 2024</div>
-                                <div>Skills: Threat Management, Vulnerability Assessment</div>
+                                <div>📅 Issued: Dec 2024 · Expires: Dec 2027</div>
                             </div>
                         </div>
 
-                        <!-- Penetration Testing -->
                         <div class="certification-card">
                             <h3 class="cert-title">Penetration Testing Professional</h3>
                             <div class="cert-issuer">Cybrary</div>
                             <div class="cert-details">
-                                <div>Issued: Oct 2024</div>
-                                <div>Skills: Ethical Hacking, Pen Testing</div>
+                                <div>📅 Issued: Oct 2024</div>
+                                <div class="skill-tag">Ethical Hacking</div>
+                                <div class="skill-tag">Penetration Testing</div>
                             </div>
                         </div>
 
-                        <!-- Add all other certifications -->
+                        <div class="certification-card">
+                            <h3 class="cert-title">Career Essentials in Cybersecurity</h3>
+                            <div class="cert-issuer">Microsoft & LinkedIn</div>
+                            <div class="cert-details">
+                                <div>📅 Issued: Sep 2024</div>
+                                <div class="skill-tag">Threat Management</div>
+                                <div class="skill-tag">Vulnerability Assessment</div>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <h3 class="cert-title">Data Center Design Certifications</h3>
+                            <div class="cert-issuer">TIAM Networks | API</div>
+                            <div class="cert-details">
+                                <div>📅 Issued: Jan 2022</div>
+                                <div class="skill-tag">Data Center Architecture</div>
+                                <div class="skill-tag">Disaster Recovery</div>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <h3 class="cert-title">LPIC-2</h3>
+                            <div class="cert-issuer">Arjang Institute</div>
+                            <div class="cert-details">
+                                <div>📅 Issued: Mar 2019</div>
+                                <div class="skill-tag">Linux Security</div>
+                                <div class="skill-tag">System Administration</div>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <h3 class="cert-title">Certified Ethical Hacker</h3>
+                            <div class="cert-issuer">EC-Council</div>
+                            <div class="cert-details">
+                                <div>📅 Issued: Aug 2018</div>
+                                <div class="skill-tag">Network Monitoring</div>
+                                <div class="skill-tag">Penetration Testing</div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Education -->
-                <section class="experience-section">
+                <section>
                     <h2 class="section-title">Education</h2>
                     <div class="certification-card">
                         <h3 class="cert-title">MSc Information Technology</h3>
                         <div class="cert-issuer">University of Tehran</div>
                         <div class="cert-details">2018 - 2021</div>
                     </div>
+                    
+                    <div class="certification-card">
+                        <h3 class="cert-title">BSc Information Technology</h3>
+                        <div class="cert-issuer">Payame Noor University</div>
+                        <div class="cert-details">2013 - 2017</div>
+                    </div>
                 </section>
 
-                <!-- Skills -->
-                <section class="experience-section">
+                <section>
                     <h2 class="section-title">Technical Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h4>Network Security</h4>
-                            <ul>
-                                <li>Cisco Systems</li>
-                                <li>Firewalls</li>
-                                <li>SIEM</li>
-                            </ul>
-                        </div>
-                        <!-- Add other skill categories -->
+                    <div class="certification-card">
+                        <div class="skill-tag">Network Monitoring Tools</div>
+                        <div class="skill-tag">Information Security Management</div>
+                        <div class="skill-tag">Risk Assessment</div>
+                        <div class="skill-tag">Cisco Systems</div>
+                        <div class="skill-tag">Siemens BMS</div>
+                        <div class="skill-tag">Python Programming</div>
+                        <div class="skill-tag">Cloud Computing</div>
                     </div>
                 </section>
             </aside>
