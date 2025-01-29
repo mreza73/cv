@@ -1,203 +1,477 @@
-<!doctype html>
-    <html lang="en" style="">
-      <head>
-        <meta charset="utf-8" />
-        
-    <title>Mohamadreza Ghorbani</title>
-    <meta name="description" content="Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports." />
-  
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
-        <style>
-          :root{color-scheme:light dark;--color-background-light: #ffffff;--color-dimmed-light: #f3f4f5;--color-primary-light: #191e23;--color-secondary-light: #6c7781;--color-accent-light: #0073aa;--color-background-dark: #191e23;--color-dimmed-dark: #23282d;--color-primary-dark: #fbfbfc;--color-secondary-dark: #ccd0d4;--color-accent-dark: #00a0d2;--color-background: var(--color-background-light);--color-dimmed: var(--color-dimmed-light);--color-primary: var(--color-primary-light);--color-secondary: var(--color-secondary-light);--color-accent: var(--color-accent-light);--scale-ratio: 1.25;--scale0: 1rem;--scale1: calc(var(--scale0) * var(--scale-ratio));--scale2: calc(var(--scale1) * var(--scale-ratio));--scale3: calc(var(--scale2) * var(--scale-ratio));--scale4: calc(var(--scale3) * var(--scale-ratio));--scale5: calc(var(--scale4) * var(--scale-ratio))}@media (prefers-color-scheme: dark){:root{--color-background: var(--color-background-dark);--color-dimmed: var(--color-dimmed-dark);--color-primary: var(--color-primary-dark);--color-secondary: var(--color-secondary-dark);--color-accent: var(--color-accent-dark)}}*{box-sizing:border-box;margin:0;padding:0}html{font-size:14px}body{background:var(--color-background);color:var(--color-primary);display:grid;font:1em/1.5 Lato,sans-serif;gap:2em;grid-template-columns:[full-start] 1fr [main-start side-start] minmax(min-content,12em) [side-end content-start] minmax(min-content,36em) [main-end content-end] 1fr [full-end];grid-template-rows:auto [content] 0;margin-bottom:4em}body:before{content:"";grid-column:full;grid-row:content}ol,ul{padding-left:1em}:not(.icon-list,.tag-list)>li+li{margin-top:.4em}li::marker,.network{color:var(--color-secondary)}a{color:var(--color-accent);text-decoration:none}a:focus,a:hover{text-decoration:underline}h1,h2,h3,h5{font-weight:400}h1,h2,h3{line-height:1.2}h1{font-size:var(--scale5)}h2{color:var(--color-secondary);font-size:var(--scale4)}h3{color:var(--color-secondary);font-size:var(--scale3);grid-column:side;margin-bottom:1rem}h4{font-size:var(--scale2)}h5{font-size:var(--scale1)}h6{font-size:var(--scale0)}blockquote{border-left:.2em solid var(--color-dimmed);padding-left:1em}cite{color:var(--color-secondary);font-style:inherit}cite:before{content:"— "}svg{margin-right:.2em;vertical-align:text-bottom}.masthead{background:var(--color-dimmed);display:inherit;gap:inherit;grid-column:full;grid-template-columns:inherit;padding:4em 0;text-align:center}.masthead>*,section{grid-column:main}.masthead>img{border:4px solid;border-radius:50%;margin:0 auto;max-width:12em}article>*+*,blockquote>*+*,.timeline>div>*+*{margin-top:.6em}.meta{color:var(--color-secondary)}.stack{display:grid;gap:1.5em}.icon-list{display:flex;flex-wrap:wrap;gap:.4em 1em;justify-content:center;list-style:none;padding:0}.grid-list{display:grid;gap:1em}.tag-list{display:flex;flex-wrap:wrap;gap:.4em;list-style:none;padding:0}.tag-list>li{background:var(--color-dimmed);border-radius:.2em;padding:.2em .6em}.timeline>div{position:relative}.timeline>div:not(:last-child){padding-bottom:1rem}.timeline>div:not(:last-child):before{content:"";position:absolute;top:1rem;left:-15px;width:2px;height:100%;background:var(--color-secondary)}.timeline>div:not(:only-child):after{content:"";position:absolute;top:.6rem;left:-20px;width:8px;height:8px;background:var(--color-secondary);border:2px solid var(--color-background);border-radius:50%}@media print,(min-width: 48em){h3{text-align:right;margin-bottom:inherit}.masthead{text-align:inherit}.masthead>*,section{grid-column:content}.masthead img{grid-column:side;grid-row:span 2;max-width:100%}section{display:contents}.icon-list{flex-direction:column}.grid-list{grid-template-columns:repeat(auto-fit,minmax(calc((100% - 1em)/2),1fr))}}@media print{.duration{display:none}}
-        </style>
-        <script type="module">
-          const pluralize = (num, str) => `${num} ${num === 1 ? str : str.concat('s')}`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamadreza Ghorbani - Cybersecurity & IT Infrastructure Expert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A5C82;
+            --secondary: #4F8DB3;
+            --accent: #32B3C7;
+            --dark: #1A2B3C;
+            --light: #F5F9FC;
+        }
 
-class TimeDuration extends HTMLElement {
-  connectedCallback() {
-    const [from, to] = this.querySelectorAll('time')
-    if (!from) return
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+        }
 
-    const startDate = new Date(from.dateTime || from.textContent)
-    const endDate = new Date(to ? to.dateTime || to.textContent : Date.now())
-    const diffDate = new Date(endDate - startDate)
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-    const years = diffDate.getFullYear() - 1970
-    const months = diffDate.getMonth()
-    const days = diffDate.getDate() - 1
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
 
-    const segments = [
-      years && pluralize(years, 'yr'),
-      months && pluralize(months, 'mo'),
-      days && !years && !months && pluralize(days, 'day'),
-    ].filter(Boolean)
-    if (!segments.length) return
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
 
-    const duration = document.createElement('time')
-    duration.classList.add('duration')
-    duration.textContent = '· '.concat(segments.join(' '))
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
 
-    this.append(' ', duration)
-  }
-}
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+        }
 
-customElements.define('time-duration', TimeDuration)
+        .name {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+        }
 
-        </script>
-      </head>
-      <body>
-        
-    <header class="masthead">
-      
-      <div><h1>Mohamadreza Ghorbani</h1> <h2>IT & Low Voltage Systems Supervisor | Network & BMS Specialist | Cybersecurity Enthusiast | Skilled in Airport IT Infrastructure | Open to Global Opportunities</h2></div>
-      <article><p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports.</p></article>
-      <ul class="icon-list">
-        
-        
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <a href="mailto:mreza@me.com">mreza@me.com</a>
-          </li>
-        
-        
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <a href="tel:+989354055240">+989354055240</a>
-          </li>
-        
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> <a href="www.linkedin.com/in/mrezagh">www.linkedin.com/in/mrezagh</a></li>
-        
-      </ul>
-    </header>
-   
-      <section id="work">
-        <h3>Work</h3>
-        <div class="stack">
-          
-              <article>
-                <header>
-                  <h4></h4>
-                  <div class="meta"></div>
-                </header>
-                <div class="timeline">
-                  
-                      <div>
-                        <div>
-                          <h5>Low Current Systems Engineering Supervisor</h5>
-                          <div class="meta">
-                            <div><time-duration><time datetime="2022-12">Dec 2022</time> – Present</time-duration></div>
-                            
-                          </div>
-                        </div>
-                        <p>Led implementation of low current systems for the new terminal at Kish International Airport, ensuring seamless integration across multiple technologies including BMS, Fire Alarm, Network, Access Control, CCTV, and Public Address systems.</p>
-                        
-                      </div>
+        .title {
+            font-size: 1.4em;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95em;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-item i {
+            font-size: 1.2em;
+        }
+
+        /* Main Content Layout */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        /* Left Column Styles */
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 80%;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        /* Experience Cards */
+        .experience-card {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--light);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .company-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .company-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .date {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .position {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .experience-list {
+            list-style: none;
+        }
+
+        .experience-list li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .experience-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Right Column Styles */
+        .sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Skill Bars */
+        .skill-item {
+            margin-bottom: 25px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            transition: width 1s ease-in-out;
+        }
+
+        /* Certification List */
+        .certification-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .cert-icon {
+            font-size: 1.8em;
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 30px 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-content, .sidebar {
+            animation: fadeIn 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="name">Mohamadreza Ghorbani</h1>
+            <div class="title">IT Infrastructure & Cybersecurity Specialist</div>
+            <div class="contact-info">
+                <a href="tel:+989354055240" class="contact-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    +98 935 405 5240
+                </a>
+                <a href="mailto:mreza@me.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    mreza@me.com
+                </a>
+                <a href="https://linkedin.com/in/mrezagh" target="_blank" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn Profile
+                </a>
+            </div>
+        </header>
+
+        <div class="resume-grid">
+            <main class="main-content">
+                <section class="summary">
+                    <h2 class="section-title">Professional Summary</h2>
+                    <p>Seasoned IT professional with 10+ years experience designing and implementing mission-critical infrastructure solutions. Expertise in airport IT systems, cybersecurity frameworks, and large-scale network deployments. Proven leader in managing cross-functional teams and delivering complex projects under tight deadlines.</p>
+                </section>
+
+                <section class="experience">
+                    <h2 class="section-title">Professional Experience</h2>
                     
-                      <div>
-                        <div>
-                          <h5>Technical Manager</h5>
-                          <div class="meta">
-                            <div><time-duration><time datetime="2022-01">Jan 2022</time> – Present</time-duration></div>
-                            
-                          </div>
+                    <div class="experience-card">
+                        <div class="company-row">
+                            <div class="company-name">Tolid Malzoomat Bargh (TMB)</div>
+                            <div class="date">Dec 2022 - Present</div>
                         </div>
-                        
-                        
-                      </div>
-                    
-                      <div>
-                        <div>
-                          <h5>Site Manager</h5>
-                          <div class="meta">
-                            <div><time-duration><time datetime="2020-05">May 2020</time> – <time datetime="2022-05">May 2022</time></time-duration></div>
-                            
-                          </div>
-                        </div>
-                        <p>Managed IT and network infrastructure projects at Kish International Airport, overseeing design, implementation, and maintenance of secure network architectures.</p>
-                        
-                      </div>
-                    
-                      <div>
-                        <div>
-                          <h5>IT Support Specialist</h5>
-                          <div class="meta">
-                            <div><time-duration><time datetime="2013-02">Feb 2013</time> – <time datetime="2019-02">Feb 2019</time></time-duration></div>
-                            
-                          </div>
-                        </div>
-                        
-                        
-                      </div>
-                    
-                </div>
-              </article>
-            
-        </div>
-      </section>
-      
-      <section id="education">
-        <h3>Education</h3>
-        <div class="stack">
-          
-              <article>
-                <header>
-                  <h4>University of Tehran</h4>
-                  <div class="meta">
-                    <strong>Information Technology</strong>
-                    <div><time-duration><time datetime="2018">Jan 2018</time> – <time datetime="2021">Jan 2021</time></time-duration></div>
-                  </div>
-                </header>
-                <p>Master of Science</p>
-                
-              </article>
-            
-              <article>
-                <header>
-                  <h4>Payame Noor University</h4>
-                  <div class="meta">
-                    <strong>Information Technology</strong>
-                    <div><time-duration><time datetime="2013">Jan 2013</time> – <time datetime="2017">Jan 2017</time></time-duration></div>
-                  </div>
-                </header>
-                <p>Bachelor's degree</p>
-                
-              </article>
-            
-        </div>
-      </section>
-    
-          
-         
-      <section id="skills">
-        <h3>Skills</h3>
-        <div class="grid-list">
-          
-              <div>
-                
-                
-              </div>
-            
-              <div>
-                
-                
-              </div>
-            
-              <div>
-                
-                
-              </div>
-            
-        </div>
-      </section>
-     
-      <section id="languages">
-        <h3>Languages</h3>
-        <div class="grid-list">
-          <div><h4>English</h4> Professional Working</div><div><h4>German</h4> Elementary</div>
-        </div>
-      </section>
-    
-         
-      </body>
+                        <div class="position">Low Current Systems Engineering Supervisor</div>
+                        <div class="location">Kish Airport, Iran</div>
+                        <ul class="experience-list">
+                            <li>Led $5M+ airport infrastructure project for new terminal</li>
+                            <li>Integrated Siemens BMS with Cisco network infrastructure</li>
+                            <li>Reduced system downtime by 35% through optimized workflows</li>
+                            <li>Managed team of 25+ technicians and engineers</li>
+                        </ul>
+                    </div>
 
+                    <div class="experience-card">
+                        <div class="company-row">
+                            <div class="company-name">Honar Shahr Aftab</div>
+                            <div class="date">Jan 2022 - Present</div>
+                        </div>
+                        <div class="position">Technical Manager</div>
+                        <div class="location">Kish Island, Iran</div>
+                        <ul class="experience-list">
+                            <li>Oversaw island-wide technology infrastructure projects</li>
+                            <li>Implemented energy-efficient low-voltage solutions</li>
+                            <li>Coordinated with government agencies for compliance</li>
+                            <li>Managed $2.5M annual technology budget</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="company-row">
+                            <div class="company-name">IRITCO</div>
+                            <div class="date">May 2020 - May 2022</div>
+                        </div>
+                        <div class="position">Site Manager</div>
+                        <div class="location">Kish International Airport Project</div>
+                        <ul class="experience-list">
+                            <li>Managed full-cycle IT infrastructure deployment</li>
+                            <li>Designed data center with SAN storage and UTM systems</li>
+                            <li>Implemented Cisco-based network architecture</li>
+                            <li>Achieved 99.9% uptime through optimized monitoring</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="company-row">
+                            <div class="company-name">Kishwood Industries</div>
+                            <div class="date">Feb 2013 - Feb 2019</div>
+                        </div>
+                        <div class="position">IT Support Specialist</div>
+                        <div class="location">Kish Island, Iran</div>
+                        <ul class="experience-list">
+                            <li>Managed enterprise IT infrastructure</li>
+                            <li>Implemented first cybersecurity protocols</li>
+                            <li>Reduced system outages by 40%</li>
+                            <li>Automated 50+ routine maintenance tasks</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <section class="skills">
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Network Security</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Infrastructure Design</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Cybersecurity</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="certifications">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="certification-item">
+                        <i class="fas fa-shield-alt cert-icon"></i>
+                        <div>
+                            <div>Career Essentials in Cybersecurity</div>
+                            <small>Microsoft & LinkedIn • 2023</small>
+                        </div>
+                    </div>
+
+                    <div class="certification-item">
+                        <i class="fas fa-bug cert-icon"></i>
+                        <div>
+                            <div>Penetration Testing Professional</div>
+                            <small>Cyberny • 2022</small>
+                        </div>
+                    </div>
+
+                    <div class="certification-item">
+                        <i class="fas fa-network-wired cert-icon"></i>
+                        <div>
+                            <div>LPIC-2 Certification</div>
+                            <small>Linux Professional Institute • 2021</small>
+                        </div>
+                    </div>
+
+                    <div class="certification-item">
+                        <i class="fas fa-cloud cert-icon"></i>
+                        <div>
+                            <div>Cloud Computing Specialist</div>
+                            <small>AWS • 2020</small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="education">
+                    <h2 class="section-title">Education</h2>
+                    <div class="certification-item">
+                        <i class="fas fa-graduation-cap cert-icon"></i>
+                        <div>
+                            <div>MSc Information Technology</div>
+                            <small>University of Tehran • 2018-2021</small>
+                        </div>
+                    </div>
+
+                    <div class="certification-item">
+                        <i class="fas fa-certificate cert-icon"></i>
+                        <div>
+                            <div>BSc Information Technology</div>
+                            <small>Payame Noor University • 2013-2017</small>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="languages">
+                    <h2 class="section-title">Languages</h2>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>English</span>
+                            <span>Professional</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>German</span>
+                            <span>Elementary</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
