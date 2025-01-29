@@ -3,184 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamadreza Ghorbani - Cybersecurity Professional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Mohamadreza Ghorbani - Professional Resume</title>
     <style>
         :root {
-            --dark-bg: #0a0a0a;
-            --surface: #1a1a1a;
-            --primary: #00ff88;
-            --secondary: #00b4d8;
-            --text: #e0e0e0;
+            --primary: #2A5C82;
+            --secondary: #4F8DB3;
+            --accent: #F0B323;
+            --dark: #2D2D2D;
+            --light: #F8F9FA;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
         body {
-            background: var(--dark-bg);
-            color: var(--text);
-            line-height: 1.7;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 40px 20px;
         }
 
         /* Header Styles */
         .header {
             text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeIn 1s ease;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
         }
 
         .name {
-            font-size: 2.5rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
         }
 
         .title {
-            font-size: 1.2rem;
             color: var(--secondary);
-            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 25px;
         }
 
         .contact-info {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            gap: 25px;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--text);
+            gap: 8px;
+            color: var(--dark);
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            background: var(--surface);
-            transition: all 0.3s ease;
         }
 
-        .contact-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.1);
-        }
-
-        /* Main Grid Layout */
+        /* Main Layout */
         .resume-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 2rem;
+            gap: 40px;
         }
 
-        /* Card Styles */
-        .card {
-            background: var(--surface);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* Experience Section */
+        .experience-section {
+            margin-bottom: 40px;
         }
 
         .section-title {
             color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
         }
 
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: var(--primary);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            background: #252525;
-            border-radius: 8px;
-            border-left: 3px solid var(--primary);
-        }
-
-        .timeline-item::before {
-            content: '🟢';
-            position: absolute;
-            left: -2.2rem;
-            top: 1rem;
-            font-size: 1.2rem;
-        }
-
-        /* Certifications Grid */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .cert-card {
-            padding: 1rem;
-            background: #252525;
-            border-radius: 8px;
+        .experience-item {
+            margin-bottom: 35px;
+            padding-left: 25px;
             border-left: 3px solid var(--secondary);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .company-name {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .date-range {
+            color: var(--secondary);
+        }
+
+        .position {
+            color: var(--dark);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .experience-list {
+            padding-left: 25px;
+        }
+
+        .experience-list li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .certification-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--secondary);
         }
 
         .cert-title {
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
         }
 
         .cert-issuer {
             color: var(--secondary);
-            font-size: 0.9rem;
+            margin-bottom: 12px;
         }
 
-        .skill-tag {
-            display: inline-block;
-            background: #333;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            margin: 0.3rem;
-            font-size: 0.9rem;
+        .cert-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         @media (max-width: 768px) {
@@ -189,7 +176,7 @@
             }
             
             .header {
-                padding: 30px 15px;
+                text-align: left;
             }
         }
     </style>
@@ -197,10 +184,10 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="name">Mohamadreza Ghorbani 💻</h1>
+            <h1 class="name">Mohamadreza Ghorbani</h1>
             <div class="title">
-                IT & Low Voltage Systems Supervisor | Cybersecurity Enthusiast 🔐<br>
-                🌍 Open to Global Opportunities
+                IT & Low Voltage Systems Supervisor | Network & BMS Specialist<br>
+                Cybersecurity Professional | Airport IT Infrastructure Expert
             </div>
             
             <div class="contact-info">
@@ -218,92 +205,104 @@
 
         <div class="resume-grid">
             <main class="main-content">
-                <!-- Professional Summary -->
-                <section class="card">
-                    <h2 class="section-title">📌 Professional Summary</h2>
-                    <p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with 10+ years experience delivering large-scale network solutions for mission-critical environments. Expert in airport IT systems with proven leadership in managing international projects from design to maintenance. MSc in Information Technology with multiple cybersecurity certifications.</p>
-                </section>
+                <!-- Professional Experience -->
+                <section class="experience-section">
+                    <h2 class="section-title">Professional Experience</h2>
 
-                <!-- Experience -->
-                <section class="card">
-                    <h2 class="section-title">💼 Professional Experience</h2>
-                    <div class="timeline">
-                        <!-- TMB -->
-                        <div class="timeline-item">
-                            <h3>Tolid Malzoomat Bargh (TMB) 🏗️</h3>
-                            <div class="date">Dec 2022 - Present</div>
-                            <div class="position">Low Current Systems Engineering Supervisor</div>
-                            <div class="location">📍 Kish Airport, Iran</div>
-                            <ul>
-                                <li>Led $5M+ airport infrastructure project for new terminal</li>
-                                <li>Integrated Siemens BMS with Cisco network infrastructure</li>
-                                <li>Reduced system downtime by 35% through optimized workflows</li>
-                            </ul>
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Tolid Malzoomat Bargh (TMB)</h3>
+                                <div class="position">Low Current Systems Engineering Supervisor</div>
+                            </div>
+                            <div class="date-range">Dec 2022 - Present</div>
                         </div>
-
-                        <!-- Other experience items -->
+                        <div class="location">Kish Airport, Iran</div>
+                        <ul class="experience-list">
+                            <li>Led $5M+ airport infrastructure project for new terminal</li>
+                            <li>Integrated Siemens BMS with Cisco network infrastructure</li>
+                            <li>Managed team of 25+ technicians and engineers</li>
+                            <li>Implemented systems: Siemens BMS, Cisco Network, Bosch Security</li>
+                        </ul>
                     </div>
+
+                    <!-- Honar Shahr Aftab Experience -->
+                    <div class="experience-item">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Honar Shahr Aftab</h3>
+                                <div class="position">Technical Manager</div>
+                            </div>
+                            <div class="date-range">Jan 2022 - Present</div>
+                        </div>
+                        <div class="location">Kish Island, Iran</div>
+                        <ul class="experience-list">
+                            <li>Oversaw island-wide technology infrastructure projects</li>
+                            <li>Implemented energy-efficient low-voltage solutions</li>
+                            <li>Coordinated with government agencies for compliance</li>
+                        </ul>
+                    </div>
+
+                    <!-- Add other experiences following the same pattern -->
                 </section>
             </main>
 
-            <!-- Sidebar -->
             <aside class="sidebar">
                 <!-- Certifications -->
-                <section class="card">
-                    <h2 class="section-title">🎖️ Certifications</h2>
-                    <div class="cert-grid">
-                        <div class="cert-card">
-                            <h3 class="cert-title">Career Essentials in Cybersecurity 🔒</h3>
+                <section class="experience-section">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="certifications-grid">
+                        <!-- Career Essentials -->
+                        <div class="certification-card">
+                            <h3 class="cert-title">Career Essentials in Cybersecurity</h3>
                             <div class="cert-issuer">Microsoft & LinkedIn</div>
-                            <div class="date">Sep 2024</div>
-                            <div class="skills">
-                                <span class="skill-tag">Threat Management</span>
-                                <span class="skill-tag">Vulnerability Assessment</span>
+                            <div class="cert-details">
+                                <div>Issued: Sep 2024</div>
+                                <div>Skills: Threat Management, Vulnerability Assessment</div>
                             </div>
                         </div>
 
-                        <!-- Other certifications -->
-                    </div>
-                </section>
+                        <!-- Penetration Testing -->
+                        <div class="certification-card">
+                            <h3 class="cert-title">Penetration Testing Professional</h3>
+                            <div class="cert-issuer">Cybrary</div>
+                            <div class="cert-details">
+                                <div>Issued: Oct 2024</div>
+                                <div>Skills: Ethical Hacking, Pen Testing</div>
+                            </div>
+                        </div>
 
-                <!-- Skills -->
-                <section class="card">
-                    <h2 class="section-title">🛠️ Technical Skills</h2>
-                    <div class="skills-grid">
-                        <span class="skill-tag">Network Security</span>
-                        <span class="skill-tag">Cisco Systems</span>
-                        <span class="skill-tag">Penetration Testing</span>
-                        <span class="skill-tag">Linux Administration</span>
-                        <span class="skill-tag">Cloud Computing</span>
+                        <!-- Add all other certifications -->
                     </div>
                 </section>
 
                 <!-- Education -->
-                <section class="card">
-                    <h2 class="section-title">🎓 Education</h2>
-                    <div class="education-item">
-                        <h3>MSc Information Technology</h3>
-                        <div class="institution">University of Tehran</div>
-                        <div class="date">2018 - 2021</div>
+                <section class="experience-section">
+                    <h2 class="section-title">Education</h2>
+                    <div class="certification-card">
+                        <h3 class="cert-title">MSc Information Technology</h3>
+                        <div class="cert-issuer">University of Tehran</div>
+                        <div class="cert-details">2018 - 2021</div>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="experience-section">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h4>Network Security</h4>
+                            <ul>
+                                <li>Cisco Systems</li>
+                                <li>Firewalls</li>
+                                <li>SIEM</li>
+                            </ul>
+                        </div>
+                        <!-- Add other skill categories -->
                     </div>
                 </section>
             </aside>
         </div>
     </div>
-
-    <script>
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.card').forEach((card) => {
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
