@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamadreza Ghorbani - Certifications</title>
+    <title>Mohamadreza Ghorbani - Cybersecurity Professional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -35,51 +35,133 @@
             padding: 2rem;
         }
 
-        .certifications-section {
-            margin-top: 2rem;
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease;
         }
 
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .name {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
             gap: 1.5rem;
-            margin-top: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
 
-        .cert-card {
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: var(--surface);
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.1);
+        }
+
+        /* Main Grid Layout */
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
             background: var(--surface);
             border-radius: 12px;
             padding: 1.5rem;
-            border-left: 4px solid var(--primary);
-            transition: transform 0.3s ease;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
             opacity: 0;
             transform: translateY(20px);
         }
 
-        .cert-card.visible {
+        .card.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .cert-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .cert-header {
+        .section-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
+            gap: 0.5rem;
         }
 
-        .cert-icon {
-            font-size: 2rem;
-            color: var(--primary);
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #252525;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .timeline-item::before {
+            content: '🟢';
+            position: absolute;
+            left: -2.2rem;
+            top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Certifications Grid */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .cert-card {
+            padding: 1rem;
+            background: #252525;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
         }
 
         .cert-title {
-            font-size: 1.1rem;
             color: var(--primary);
+            margin-bottom: 0.5rem;
         }
 
         .cert-issuer {
@@ -87,196 +169,139 @@
             font-size: 0.9rem;
         }
 
-        .cert-details {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #333;
-        }
-
-        .cert-date {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
+        .skill-tag {
+            display: inline-block;
+            background: #333;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin: 0.3rem;
+            font-size: 0.9rem;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        @media (max-width: 768px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header {
+                padding: 30px 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <section class="certifications-section">
-            <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 1.5rem;">🎖️ Licenses & Certifications</h2>
-            
-            <div class="cert-grid">
-                <!-- Microsoft Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🔒</div>
-                        <div>
-                            <div class="cert-title">Career Essentials in Cybersecurity</div>
-                            <div class="cert-issuer">Microsoft & LinkedIn</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Jan 2024</span>
-                        </div>
-                        <div class="cert-date">
-                            <span>Expires:</span>
-                            <span>Jan 2027</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Penetration Testing -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🛡️</div>
-                        <div>
-                            <div class="cert-title">Penetration Testing Professional</div>
-                            <div class="cert-issuer">Cybernyx</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Dec 2023</span>
-                        </div>
-                        <div class="cert-date">
-                            <span>Expires:</span>
-                            <span>Dec 2026</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cisco Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🌐</div>
-                        <div>
-                            <div class="cert-title">Network & Information Security</div>
-                            <div class="cert-issuer">Cisco</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Oct 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Linux Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🐧</div>
-                        <div>
-                            <div class="cert-title">LPIC-2: Linux Engineer</div>
-                            <div class="cert-issuer">Linux Professional Institute</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Sep 2022</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AWS Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">☁️</div>
-                        <div>
-                            <div class="cert-title">Cloud Computing Specialization</div>
-                            <div class="cert-issuer">AWS</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Aug 2021</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EC-Council Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">💻</div>
-                        <div>
-                            <div class="cert-title">Certified Ethical Hacker (CEH)</div>
-                            <div class="cert-issuer">EC-Council</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Jun 2020</span>
-                        </div>
-                        <div class="cert-date">
-                            <span>Expires:</span>
-                            <span>Jun 2023</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CompTIA Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🖥️</div>
-                        <div>
-                            <div class="cert-title">CompTIA Security+</div>
-                            <div class="cert-issuer">CompTIA</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Mar 2019</span>
-                        </div>
-                        <div class="cert-date">
-                            <span>Expires:</span>
-                            <span>Mar 2022</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CCNA Certification -->
-                <div class="cert-card">
-                    <div class="cert-header">
-                        <div class="cert-icon">🔌</div>
-                        <div>
-                            <div class="cert-title">Cisco Certified Network Associate</div>
-                            <div class="cert-issuer">Cisco</div>
-                        </div>
-                    </div>
-                    <div class="cert-details">
-                        <div class="cert-date">
-                            <span>Issued:</span>
-                            <span>Nov 2018</span>
-                        </div>
-                    </div>
-                </div>
+        <header class="header">
+            <h1 class="name">Mohamadreza Ghorbani 💻</h1>
+            <div class="title">
+                IT & Low Voltage Systems Supervisor | Cybersecurity Enthusiast 🔐<br>
+                🌍 Open to Global Opportunities
             </div>
-        </section>
+            
+            <div class="contact-info">
+                <a href="tel:+989354055240" class="contact-item">
+                    📱 +98 935 405 5240
+                </a>
+                <a href="mailto:mreza@me.com" class="contact-item">
+                    📧 mreza@me.com
+                </a>
+                <a href="https://linkedin.com/in/mrezagh" class="contact-item">
+                    🔗 linkedin.com/in/mrezagh
+                </a>
+            </div>
+        </header>
+
+        <div class="resume-grid">
+            <main class="main-content">
+                <!-- Professional Summary -->
+                <section class="card">
+                    <h2 class="section-title">📌 Professional Summary</h2>
+                    <p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with 10+ years experience delivering large-scale network solutions for mission-critical environments. Expert in airport IT systems with proven leadership in managing international projects from design to maintenance. MSc in Information Technology with multiple cybersecurity certifications.</p>
+                </section>
+
+                <!-- Experience -->
+                <section class="card">
+                    <h2 class="section-title">💼 Professional Experience</h2>
+                    <div class="timeline">
+                        <!-- TMB -->
+                        <div class="timeline-item">
+                            <h3>Tolid Malzoomat Bargh (TMB) 🏗️</h3>
+                            <div class="date">Dec 2022 - Present</div>
+                            <div class="position">Low Current Systems Engineering Supervisor</div>
+                            <div class="location">📍 Kish Airport, Iran</div>
+                            <ul>
+                                <li>Led $5M+ airport infrastructure project for new terminal</li>
+                                <li>Integrated Siemens BMS with Cisco network infrastructure</li>
+                                <li>Reduced system downtime by 35% through optimized workflows</li>
+                            </ul>
+                        </div>
+
+                        <!-- Other experience items -->
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Certifications -->
+                <section class="card">
+                    <h2 class="section-title">🎖️ Certifications</h2>
+                    <div class="cert-grid">
+                        <div class="cert-card">
+                            <h3 class="cert-title">Career Essentials in Cybersecurity 🔒</h3>
+                            <div class="cert-issuer">Microsoft & LinkedIn</div>
+                            <div class="date">Sep 2024</div>
+                            <div class="skills">
+                                <span class="skill-tag">Threat Management</span>
+                                <span class="skill-tag">Vulnerability Assessment</span>
+                            </div>
+                        </div>
+
+                        <!-- Other certifications -->
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="card">
+                    <h2 class="section-title">🛠️ Technical Skills</h2>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Network Security</span>
+                        <span class="skill-tag">Cisco Systems</span>
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">Linux Administration</span>
+                        <span class="skill-tag">Cloud Computing</span>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="card">
+                    <h2 class="section-title">🎓 Education</h2>
+                    <div class="education-item">
+                        <h3>MSc Information Technology</h3>
+                        <div class="institution">University of Tehran</div>
+                        <div class="date">2018 - 2021</div>
+                    </div>
+                </section>
+            </aside>
+        </div>
     </div>
 
     <script>
-        // Animation trigger
+        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if(entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.cert-card').forEach((card) => {
+        document.querySelectorAll('.card').forEach((card) => {
             observer.observe(card);
         });
     </script>
