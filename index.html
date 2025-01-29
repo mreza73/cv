@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamadreza Ghorbani - Cybersecurity & IT Infrastructure Expert</title>
+    <title>Mohamadreza Ghorbani - Professional Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -35,7 +35,6 @@
             padding: 40px 20px;
         }
 
-        /* Header Styles */
         .header {
             text-align: center;
             margin-bottom: 50px;
@@ -45,32 +44,19 @@
             color: white;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            transform: rotate(45deg);
         }
 
         .name {
             font-size: 2.8em;
             font-weight: 700;
             margin-bottom: 10px;
-            position: relative;
         }
 
         .title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: 300;
-            opacity: 0.9;
             margin-bottom: 25px;
+            line-height: 1.4;
         }
 
         .contact-info {
@@ -85,28 +71,16 @@
             align-items: center;
             gap: 10px;
             font-size: 0.95em;
-            transition: transform 0.3s ease;
-            text-decoration: none;
             color: white;
+            text-decoration: none;
         }
 
-        .contact-item:hover {
-            transform: translateY(-3px);
-        }
-
-        .contact-item i {
-            font-size: 1.2em;
-        }
-
-        /* Main Content Layout */
         .resume-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
-            margin-top: 30px;
         }
 
-        /* Left Column Styles */
         .main-content {
             background: white;
             padding: 30px;
@@ -119,126 +93,59 @@
             font-size: 1.6em;
             font-weight: 600;
             margin-bottom: 25px;
-            position: relative;
-            padding-left: 20px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
         }
 
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 80%;
-            background: var(--accent);
-            border-radius: 4px;
-        }
-
-        /* Experience Cards */
         .experience-card {
             margin-bottom: 30px;
             padding: 25px;
             background: var(--light);
             border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 4px solid var(--secondary);
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .company-row {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             margin-bottom: 15px;
         }
 
         .company-name {
-            font-size: 1.2em;
             font-weight: 600;
             color: var(--dark);
         }
 
         .date {
             color: var(--secondary);
-            font-weight: 500;
         }
 
         .position {
             color: var(--accent);
-            font-weight: 500;
             margin-bottom: 10px;
         }
 
         .experience-list {
-            list-style: none;
+            padding-left: 25px;
         }
 
         .experience-list li {
             margin-bottom: 12px;
-            padding-left: 25px;
             position: relative;
         }
 
         .experience-list li::before {
             content: '▹';
             position: absolute;
-            left: 0;
+            left: -20px;
             color: var(--accent);
         }
 
-        /* Right Column Styles */
         .sidebar {
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-        }
-
-        /* Skill Bars */
-        .skill-item {
-            margin-bottom: 25px;
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .skill-bar {
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
-            transition: width 1s ease-in-out;
-        }
-
-        /* Certification List */
-        .certification-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--light);
-            border-radius: 8px;
-        }
-
-        .cert-icon {
-            font-size: 1.8em;
-            color: var(--primary);
         }
 
         @media (max-width: 768px) {
@@ -249,21 +156,6 @@
             .header {
                 padding: 30px 15px;
             }
-            
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .main-content, .sidebar {
-            animation: fadeIn 0.8s ease-out;
         }
     </style>
 </head>
@@ -271,19 +163,20 @@
     <div class="container">
         <header class="header">
             <h1 class="name">Mohamadreza Ghorbani</h1>
-            <div class="title">IT Infrastructure & Cybersecurity Specialist</div>
+            <div class="title">IT & Low Voltage Systems Supervisor | Network & BMS Specialist | Cybersecurity Enthusiast | Skilled in Airport IT Infrastructure | Open to Global Opportunities<br>United Arab Emirates</div>
+            
             <div class="contact-info">
-                <a href="tel:+989354055240" class="contact-item">
+                <div class="contact-item">
                     <i class="fas fa-mobile-alt"></i>
-                    +98 935 405 5240
-                </a>
+                    +989354055240
+                </div>
                 <a href="mailto:mreza@me.com" class="contact-item">
                     <i class="fas fa-envelope"></i>
                     mreza@me.com
                 </a>
-                <a href="https://linkedin.com/in/mrezagh" target="_blank" class="contact-item">
+                <a href="https://www.linkedin.com/in/mrezagh" class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    LinkedIn Profile
+                    linkedin.com/in/mrezagh
                 </a>
             </div>
         </header>
@@ -291,183 +184,129 @@
         <div class="resume-grid">
             <main class="main-content">
                 <section class="summary">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <p>Seasoned IT professional with 10+ years experience designing and implementing mission-critical infrastructure solutions. Expertise in airport IT systems, cybersecurity frameworks, and large-scale network deployments. Proven leader in managing cross-functional teams and delivering complex projects under tight deadlines.</p>
+                    <h2 class="section-title">Summary</h2>
+                    <p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports. Adept at leading cross-functional teams through all project phases—from initial design and installation to ongoing optimization and maintenance—ensuring high performance and operational reliability.</p>
+
+                    <p>Skilled in Network Infrastructure Design, Data Center Management, Storage Solutions (Tape & SAN), and Cybersecurity. Proven proficiency with Cisco equipment (switches, firewalls, routers), Building Management Systems (Siemens), and Security Systems (CCTV, Access Control). Experienced in implementing robust security measures, monitoring network integrity, and mitigating potential threats to safeguard sensitive systems.</p>
+
+                    <p>Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures.</p>
+
+                    <p>In addition to my professional experience, I am passionate about being a Google maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography.</p>
                 </section>
 
                 <section class="experience">
-                    <h2 class="section-title">Professional Experience</h2>
-                    
+                    <h2 class="section-title">Experience</h2>
+
                     <div class="experience-card">
                         <div class="company-row">
                             <div class="company-name">Tolid Malzoomat Bargh (TMB)</div>
-                            <div class="date">Dec 2022 - Present</div>
+                            <div class="date">December 2022 - Present (2 years 2 months)</div>
                         </div>
                         <div class="position">Low Current Systems Engineering Supervisor</div>
-                        <div class="location">Kish Airport, Iran</div>
+                        <div class="location">Kish Airport</div>
                         <ul class="experience-list">
-                            <li>Led $5M+ airport infrastructure project for new terminal</li>
-                            <li>Integrated Siemens BMS with Cisco network infrastructure</li>
-                            <li>Reduced system downtime by 35% through optimized workflows</li>
-                            <li>Managed team of 25+ technicians and engineers</li>
+                            <li>Accomplished Low Current Systems Supervisor with extensive experience managing and delivering large-scale infrastructure projects</li>
+                            <li>Successfully led the implementation of critical low current systems for the new terminal at Kish International Airport</li>
+                            <li>Ensured seamless integration and high operational standards across multiple complex technologies including:
+                                <ul>
+                                    <li>Building Management Systems – Siemens</li>
+                                    <li>Fire Alarm Systems – Siemens</li>
+                                    <li>Network Infrastructure – Cisco</li>
+                                    <li>Airport IT Systems – HPE, EMC & Sophos</li>
+                                    <li>Access Control Systems – Bosch</li>
+                                    <li>CCTV and Surveillance – Bosch</li>
+                                    <li>Public address system - Bosch</li>
+                                </ul>
+                            </li>
+                            <li>Skilled in project planning, team coordination, and system commissioning</li>
+                            <li>Focus on achieving optimal performance, safety, and compliance</li>
                         </ul>
                     </div>
 
                     <div class="experience-card">
                         <div class="company-row">
-                            <div class="company-name">Honar Shahr Aftab</div>
-                            <div class="date">Jan 2022 - Present</div>
+                            <div class="company-name">Honar shahr aftab</div>
+                            <div class="date">January 2022 - Present (3 years 1 month)</div>
                         </div>
                         <div class="position">Technical Manager</div>
-                        <div class="location">Kish Island, Iran</div>
-                        <ul class="experience-list">
-                            <li>Oversaw island-wide technology infrastructure projects</li>
-                            <li>Implemented energy-efficient low-voltage solutions</li>
-                            <li>Coordinated with government agencies for compliance</li>
-                            <li>Managed $2.5M annual technology budget</li>
-                        </ul>
+                        <div class="location">Kish island</div>
                     </div>
 
                     <div class="experience-card">
                         <div class="company-row">
                             <div class="company-name">IRITCO</div>
-                            <div class="date">May 2020 - May 2022</div>
+                            <div class="date">May 2020 - May 2022 (2 years 1 month)</div>
                         </div>
                         <div class="position">Site Manager</div>
-                        <div class="location">Kish International Airport Project</div>
+                        <div class="location">Kish island, iran</div>
                         <ul class="experience-list">
-                            <li>Managed full-cycle IT infrastructure deployment</li>
-                            <li>Designed data center with SAN storage and UTM systems</li>
-                            <li>Implemented Cisco-based network architecture</li>
-                            <li>Achieved 99.9% uptime through optimized monitoring</li>
+                            <li>Led team in managing comprehensive IT and network infrastructure projects</li>
+                            <li>Handled design, implementation, and operational support</li>
+                            <li>Key responsibilities:
+                                <ul>
+                                    <li>Leadership & Project Management: Oversaw team designing and installing network infrastructure</li>
+                                    <li>Data Center & Storage Solutions: Designed data center infrastructure with Tape, SAN storage and UTM systems</li>
+                                    <li>Network Implementation: Deployed Cisco switches, firewalls, routers and Wi-Fi solutions</li>
+                                    <li>Structured Cabling: Managed deployment of structured cabling systems</li>
+                                    <li>System Optimization: Performed regular monitoring and configuration management</li>
+                                    <li>Compliance & Security: Implemented security measures meeting international standards</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="experience-card">
                         <div class="company-row">
                             <div class="company-name">Kishwood Industries</div>
-                            <div class="date">Feb 2013 - Feb 2019</div>
+                            <div class="date">February 2013 - February 2019 (6 years 1 month)</div>
                         </div>
                         <div class="position">IT Support Specialist</div>
-                        <div class="location">Kish Island, Iran</div>
-                        <ul class="experience-list">
-                            <li>Managed enterprise IT infrastructure</li>
-                            <li>Implemented first cybersecurity protocols</li>
-                            <li>Reduced system outages by 40%</li>
-                            <li>Automated 50+ routine maintenance tasks</li>
-                        </ul>
+                        <div class="location">Kish Island</div>
                     </div>
                 </section>
             </main>
 
             <aside class="sidebar">
                 <section class="skills">
-                    <h2 class="section-title">Technical Expertise</h2>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Network Security</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Infrastructure Design</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Cybersecurity</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="certifications">
-                    <h2 class="section-title">Certifications</h2>
-                    <div class="certification-item">
-                        <i class="fas fa-shield-alt cert-icon"></i>
-                        <div>
-                            <div>Career Essentials in Cybersecurity</div>
-                            <small>Microsoft & LinkedIn • 2023</small>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <i class="fas fa-bug cert-icon"></i>
-                        <div>
-                            <div>Penetration Testing Professional</div>
-                            <small>Cyberny • 2022</small>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <i class="fas fa-network-wired cert-icon"></i>
-                        <div>
-                            <div>LPIC-2 Certification</div>
-                            <small>Linux Professional Institute • 2021</small>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <i class="fas fa-cloud cert-icon"></i>
-                        <div>
-                            <div>Cloud Computing Specialist</div>
-                            <small>AWS • 2020</small>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="education">
-                    <h2 class="section-title">Education</h2>
-                    <div class="certification-item">
-                        <i class="fas fa-graduation-cap cert-icon"></i>
-                        <div>
-                            <div>MSc Information Technology</div>
-                            <small>University of Tehran • 2018-2021</small>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <i class="fas fa-certificate cert-icon"></i>
-                        <div>
-                            <div>BSc Information Technology</div>
-                            <small>Payame Noor University • 2013-2017</small>
-                        </div>
-                    </div>
+                    <h2 class="section-title">Top Skills</h2>
+                    <ul class="experience-list">
+                        <li>Network Monitoring Tools</li>
+                        <li>Information Security Management</li>
+                        <li>Risk Assessment</li>
+                    </ul>
                 </section>
 
                 <section class="languages">
                     <h2 class="section-title">Languages</h2>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>English</span>
-                            <span>Professional</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
+                    <ul class="experience-list">
+                        <li>English (Professional Working)</li>
+                        <li>German (Elementary)</li>
+                    </ul>
+                </section>
 
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>German</span>
-                            <span>Elementary</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 30%"></div>
-                        </div>
+                <section class="certifications">
+                    <h2 class="section-title">Certifications</h2>
+                    <ul class="experience-list">
+                        <li>Career Essentials in Cybersecurity by Microsoft and LinkedIn</li>
+                        <li>Penetration Testing Professional Certificate by Cyberny</li>
+                        <li>Network and Information Security in Organizations</li>
+                        <li>LPIC-2</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                </section>
+
+                <section class="education">
+                    <h2 class="section-title">Education</h2>
+                    <div class="experience-card">
+                        <div class="company-name">University of Tehran</div>
+                        <div class="date">2018 - 2021</div>
+                        <div>Master of Science, Information Technology</div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <div class="company-name">Payame Noor University</div>
+                        <div class="date">2013 - 2017</div>
+                        <div>Bachelor's degree, Information Technology</div>
                     </div>
                 </section>
             </aside>
