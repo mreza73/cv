@@ -13,12 +13,16 @@
         document.getElementById('loginButton').addEventListener('click', function() {
             const clientId = '86dhjev7zh9brx';
             const redirectUri = 'https://mreza73.github.io/cv/callback.html';
-            const state = 'YOUR_STATE'; // Generate a unique state value
+            const state = generateState(); // Generate a unique state value
             const scope = 'r_liteprofile';
 
-            const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=${state}&scope=${scope}`;
+            const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${state}&scope=${scope}`;
             window.location.href = authorizationUrl;
         });
+
+        function generateState() {
+            return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        }
     </script>
 </body>
 </html>
