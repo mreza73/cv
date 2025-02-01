@@ -6,9 +6,11 @@
     <title>Mohamadreza Ghorbani | IT & Low Voltage Systems Supervisor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
             line-height: 1.6;
         }
         header {
@@ -16,38 +18,63 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(76, 175, 80, 0.8), transparent);
+            pointer-events: none;
         }
         .container {
             width: 80%;
-            margin: auto;
+            margin: 0 auto;
             overflow: hidden;
         }
         .about-section {
-            padding: 20px 0;
-            background-color: #f4f4f4;
+            padding: 40px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
         .experience-section, .education-section, .skills-section, .certifications-section, .languages-section, .interests-section {
-            padding: 20px 0;
+            padding: 40px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
         h1, h2 {
             color: #333;
         }
         .contact-section {
-            padding: 20px 0;
-            background-color: #f4f4f4;
+            padding: 40px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
         .contact-info {
             display: flex;
             justify-content: space-around;
             align-items: center;
         }
-        .contact-info div {
-            text-align: center;
-        }
         .contact-info img {
             width: 150px;
             border-radius: 50%;
             margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .contact-info img:hover {
+            transform: scale(1.1);
+        }
+        .contact-info div {
+            text-align: center;
         }
         .social-media {
             margin-top: 10px;
@@ -57,19 +84,152 @@
             color: #4CAF50;
             text-decoration: none;
             font-size: 1.2em;
+            transition: color 0.3s ease;
         }
         .social-media a:hover {
-            text-decoration: underline;
+            color: #333;
         }
         .section-title {
             color: #4CAF50;
             margin-bottom: 10px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+        .section-title:hover::after {
+            width: 50%;
         }
         .section-content {
             margin-bottom: 20px;
         }
         .project, .certification, .skill, .language, .interest {
             margin-bottom: 10px;
+            padding: 10px;
+            border-left: 4px solid #4CAF50;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .project:hover, .certification:hover, .skill:hover, .language:hover, .interest:hover {
+            background-color: #f4f4f4;
+            border-color: #333;
+        }
+        .project h3, .certification h3, .skill h3, .language h3, .interest h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .project p, .certification p, .skill p, .language p, .interest p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+        .timeline {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #4CAF50;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            width: 45%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: white;
+            border: 4px solid #4CAF50;
+            top: 8px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item.right::after {
+            left: -8px;
+        }
+        .timeline-item .content {
+            padding: 20px 30px;
+            background-color: #fff;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item .content::before {
+            content: '';
+            position: absolute;
+            top: 22px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .timeline-item.left .content::before {
+            right: -16px;
+            border-width: 8px 16px 8px 0;
+            border-color: transparent #fff transparent transparent;
+        }
+        .timeline-item.right .content::before {
+            left: -16px;
+            border-width: 8px 0 8px 16px;
+            border-color: transparent transparent transparent #fff;
+        }
+        .timeline-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.1em;
+        }
+        .timeline-item p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        .timeline-item ul {
+            margin: 10px 0 0;
+            padding: 0 0 0 20px;
+            list-style-type: disc;
+        }
+        .timeline-item ul li {
+            margin-bottom: 5px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .bounce-in {
+            opacity: 0;
+            transform: scale(0.8);
+            animation: bounceIn 1s ease-in-out forwards;
+        }
+        @keyframes bounceIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
@@ -83,7 +243,7 @@
     </div>
 </header>
 
-<div class="about-section">
+<div class="about-section fade-in">
     <div class="container">
         <h2 class="section-title">About</h2>
         <div class="section-content">
@@ -95,112 +255,129 @@
     </div>
 </div>
 
-<div class="experience-section">
+<div class="experience-section fade-in">
     <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="section-content">
-            <div class="project">
-                <h3>Low Current Systems Engineering Supervisor</h3>
-                <p><strong>Tolid Malzoomat Bargh (TMB)</strong> | Part-time | Dec 2022 - Present (2 yrs 3 mos)</p>
-                <p><strong>Kish Airport</strong> | On-site</p>
-                <ul>
-                    <li>Successfully led the implementation of critical low current systems for the new terminal at Kish International Airport.</li>
-                    <li>Managed and delivered large-scale infrastructure projects.</li>
-                    <li>Ensured seamless integration and high operational standards across multiple complex technologies, including:</li>
-                    <ul>
-                        <li>Building Management Systems – Siemens</li>
-                        <li>Fire Alarm Systems – Siemens</li>
-                        <li>Network Infrastructure – Cisco</li>
-                        <li>Airport IT Systems – HPE, EMC & Sophos</li>
-                        <li>Access Control Systems – Bosch</li>
-                        <li>CCTV and Surveillance – Bosch</li>
-                        <li>Public address system - Bosch</li>
-                    </ul>
-                    <li>Skilled in project planning, team coordination, and system commissioning.</li>
-                    <li>Focused on achieving optimal performance, safety, and compliance.</li>
-                    <li>Known for troubleshooting complex systems and streamlining operations.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h3>Technical Manager</h3>
-                <p><strong>Honar shahr aftab</strong> | Full-time | Jan 2022 - Present (3 yrs 2 mos)</p>
-                <p><strong>Kish Island</strong> | On-site</p>
-                <!-- Add details if available -->
-            </div>
-            <div class="project">
-                <h3>Site Manager</h3>
-                <p><strong>IRITCO</strong> | Full-time | May 2020 - May 2022 (2 yrs 1 mo)</p>
-                <p><strong>Kish Island, Iran</strong> | On-site</p>
-                <ul>
-                    <li>Responsible for leading a team of skilled professionals in managing comprehensive IT and network infrastructure projects from inception to completion.</li>
-                    <li>Handled the full spectrum of project activities, including design, implementation, and operational support.</li>
-                    <li>Ensured a seamless and high-performing network.</li>
-                    <li>Focused on leadership and project management, data center and storage solutions, network design and implementation, structured cabling and hardware deployment, system optimization and maintenance, and compliance and security.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h3>IT Systems Administrator</h3>
-                <p><strong>Kishwood Industries</strong> | Full-time | Feb 2013 - Feb 2019 (6 yrs 1 mo)</p>
-                <p><strong>Kish Island</strong> | On-site</p>
-                <ul>
-                    <li>System Installation and Maintenance:</li>
-                    <ul>
-                        <li>Installed, configured, and maintained critical systems, including:</li>
+            <ul class="timeline">
+                <li class="timeline-item right bounce-in">
+                    <div class="content">
+                        <h3>Low Current Systems Engineering Supervisor</h3>
+                        <p><strong>Tolid Malzoomat Bargh (TMB)</strong> | Part-time | Dec 2022 - Present (2 yrs 3 mos)</p>
+                        <p><strong>Kish Airport</strong> | On-site</p>
                         <ul>
-                            <li>Active Directory (DC) for domain control, file and printer sharing, and other DC roles.</li>
-                            <li>Exchange Server for email management.</li>
-                            <li>Elastix VOIP system for voice over IP communications.</li>
-                            <li>VMware ESXi for virtualization and resource management.</li>
+                            <li>Successfully led the implementation of critical low current systems for the new terminal at Kish International Airport.</li>
+                            <li>Managed and delivered large-scale infrastructure projects.</li>
+                            <li>Ensured seamless integration and high operational standards across multiple complex technologies, including:</li>
+                            <ul>
+                                <li>Building Management Systems – Siemens</li>
+                                <li>Fire Alarm Systems – Siemens</li>
+                                <li>Network Infrastructure – Cisco</li>
+                                <li>Airport IT Systems – HPE, EMC & Sophos</li>
+                                <li>Access Control Systems – Bosch</li>
+                                <li>CCTV and Surveillance – Bosch</li>
+                                <li>Public address system - Bosch</li>
+                            </ul>
+                            <li>Skilled in project planning, team coordination, and system commissioning.</li>
+                            <li>Focused on achieving optimal performance, safety, and compliance.</li>
+                            <li>Known for troubleshooting complex systems and streamlining operations.</li>
                         </ul>
-                        <li>Ensured the smooth operation of all passive and active network operations.</li>
-                    </ul>
-                    <li>User Support:</li>
-                    <ul>
-                        <li>Responded to user inquiries regarding computer software and hardware issues, providing timely and effective solutions.</li>
-                        <li>Set up and configured equipment for employee use, including the installation of cables, operating systems, and appropriate software.</li>
-                    </ul>
-                    <li>Hardware and Software Management:</li>
-                    <ul>
-                        <li>Installed and performed minor repairs to hardware, software, and peripheral equipment.</li>
-                        <li>Adhered to design and installation specifications to ensure proper setup and functionality.</li>
-                    </ul>
-                    <li>Network Configuration:</li>
-                    <ul>
-                        <li>Configured wide area network (WAN) and local area network (LAN) routers and related equipment.</li>
-                        <li>Optimized network performance and ensured reliable connectivity.</li>
-                    </ul>
-                    <li>Data Backup:</li>
-                    <ul>
-                        <li>Regularly backed up network data to ensure data integrity and availability in case of emergencies.</li>
-                    </ul>
-                    <li>Connectivity Support:</li>
-                    <ul>
-                        <li>Provided telephone support to resolve networking and connectivity issues, ensuring minimal downtime for users.</li>
-                    </ul>
-                    <li>Achievements:</li>
-                    <ul>
-                        <li>Successfully managed and maintained a robust IT infrastructure, contributing to the efficient operation of the company.</li>
-                        <li>Enhanced user productivity by promptly addressing and resolving technical issues.</li>
-                        <li>Implemented and maintained backup procedures, ensuring data safety and recovery capabilities.</li>
-                    </ul>
-                </ul>
-            </div>
+                    </div>
+                </li>
+                <li class="timeline-item left bounce-in">
+                    <div class="content">
+                        <h3>Technical Manager</h3>
+                        <p><strong>Honar shahr aftab</strong> | Full-time | Jan 2022 - Present (3 yrs 2 mos)</p>
+                        <p><strong>Kish Island</strong> | On-site</p>
+                        <ul>
+                            <li>Oversaw a team tasked with designing, cabling, installing, and configuring a robust network infrastructure tailored to the unique needs of an international airport environment.</li>
+                            <li>Designed and built data center infrastructure, incorporating high-capacity Tape, SAN storage, and UTM systems to support critical airport operations.</li>
+                            <li>Led the implementation of complex network systems using industry-leading technologies such as Cisco switches, firewalls, routers, and Wi-Fi solutions.</li>
+                            <li>Managed the deployment of structured cabling systems and installation of core network equipment, adhering to industry best practices and safety standards.</li>
+                            <li>Ensured optimal network performance through regular monitoring, configuration management, and fine-tuning of the infrastructure.</li>
+                            <li>Implemented stringent compliance and security measures to meet both local and international standards for safety and operational reliability.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item right bounce-in">
+                    <div class="content">
+                        <h3>Site Manager</h3>
+                        <p><strong>IRITCO</strong> | Full-time | May 2020 - May 2022 (2 yrs 1 mo)</p>
+                        <p><strong>Kish Island, Iran</strong> | On-site</p>
+                        <ul>
+                            <li>Responsible for leading a team of skilled professionals in managing comprehensive IT and network infrastructure projects from inception to completion.</li>
+                            <li>Handled the full spectrum of project activities, including design, implementation, and operational support.</li>
+                            <li>Ensured a seamless and high-performing network.</li>
+                            <li>Focused on leadership and project management, data center and storage solutions, network design and implementation, structured cabling and hardware deployment, system optimization and maintenance, and compliance and security.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="timeline-item left bounce-in">
+                    <div class="content">
+                        <h3>IT Systems Administrator</h3>
+                        <p><strong>Kishwood Industries</strong> | Full-time | Feb 2013 - Feb 2019 (6 yrs 1 mo)</p>
+                        <p><strong>Kish Island</strong> | On-site</p>
+                        <ul>
+                            <li>System Installation and Maintenance:</li>
+                            <ul>
+                                <li>Installed, configured, and maintained critical systems, including:</li>
+                                <ul>
+                                    <li>Active Directory (DC) for domain control, file and printer sharing, and other DC roles.</li>
+                                    <li>Exchange Server for email management.</li>
+                                    <li>Elastix VOIP system for voice over IP communications.</li>
+                                    <li>VMware ESXi for virtualization and resource management.</li>
+                                </ul>
+                                <li>Ensured the smooth operation of all passive and active network operations.</li>
+                            </ul>
+                            <li>User Support:</li>
+                            <ul>
+                                <li>Responded to user inquiries regarding computer software and hardware issues, providing timely and effective solutions.</li>
+                                <li>Set up and configured equipment for employee use, including the installation of cables, operating systems, and appropriate software.</li>
+                            </ul>
+                            <li>Hardware and Software Management:</li>
+                            <ul>
+                                <li>Installed and performed minor repairs to hardware, software, and peripheral equipment.</li>
+                                <li>Adhered to design and installation specifications to ensure proper setup and functionality.</li>
+                            </ul>
+                            <li>Network Configuration:</li>
+                            <ul>
+                                <li>Configured wide area network (WAN) and local area network (LAN) routers and related equipment.</li>
+                                <li>Optimized network performance and ensured reliable connectivity.</li>
+                            </ul>
+                            <li>Data Backup:</li>
+                            <ul>
+                                <li>Regularly backed up network data to ensure data integrity and availability in case of emergencies.</li>
+                            </ul>
+                            <li>Connectivity Support:</li>
+                            <ul>
+                                <li>Provided telephone support to resolve networking and connectivity issues, ensuring minimal downtime for users.</li>
+                            </ul>
+                            <li>Achievements:</li>
+                            <ul>
+                                <li>Successfully managed and maintained a robust IT infrastructure, contributing to the efficient operation of the company.</li>
+                                <li>Enhanced user productivity by promptly addressing and resolving technical issues.</li>
+                                <li>Implemented and maintained backup procedures, ensuring data safety and recovery capabilities.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
 
-<div class="education-section">
+<div class="education-section fade-in">
     <div class="container">
         <h2 class="section-title">Education</h2>
         <div class="section-content">
-            <div class="education">
+            <div class="education bounce-in">
                 <h3>Master of Science, Information Technology</h3>
                 <p><strong>University of Tehran</strong> | 2018 - 2021</p>
                 <p><strong>Field of Study:</strong> Computer Networks</p>
                 <p><strong>Thesis:</strong> “Provide a Solution to Improve IoT Security Using New Technologies”</p>
                 <p>Conducted research focused on enhancing the security of IoT systems by implementing Blockchain technology. Supervised by Dr. Hossein Samimi and Prof. Ali Moeini.</p>
             </div>
-            <div class="education">
+            <div class="education bounce-in">
                 <h3>Bachelor's degree, Information Technology</h3>
                 <p><strong>Payame Noor University</strong> | 2013 - 2017</p>
                 <p><strong>Courses:</strong> C (Programming Language), Database Management System (DBMS)</p>
@@ -209,95 +386,95 @@
     </div>
 </div>
 
-<div class="skills-section">
+<div class="skills-section fade-in">
     <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="section-content">
-            <div class="skill">Network Infrastructure Design</div>
-            <div class="skill">Data Center Management</div>
-            <div class="skill">Storage Solutions (Tape & SAN)</div>
-            <div class="skill">Cybersecurity</div>
-            <div class="skill">Network Administration</div>
-            <div class="skill">Network Switches</div>
-            <div class="skill">Network Engineering</div>
-            <div class="skill">Project Management</div>
-            <div class="skill">Technical Data Analysis</div>
-            <div class="skill">IT Service Management</div>
-            <div class="skill">Incident Management</div>
-            <div class="skill">Change Management</div>
-            <div class="skill">Service Level Management</div>
-            <div class="skill">Network Security</div>
-            <div class="skill">Information Security Management</div>
-            <div class="skill">Risk Assessment</div>
-            <div class="skill">Incident Response</div>
-            <div class="skill">Intrusion Detection Systems</div>
-            <div class="skill">Information Security Awareness</div>
-            <div class="skill">Linux Kernel</div>
-            <div class="skill">Linux System Administration</div>
-            <div class="skill">Linux Network Administration</div>
-            <div class="skill">Linux Security</div>
-            <div class="skill">Cloud Computing</div>
-            <div class="skill">Edge Computing</div>
-            <div class="skill">Python (Programming Language)</div>
-            <div class="skill">Cisco Equipment (Switches, Firewalls, Routers)</div>
-            <div class="skill">Building Management Systems (Siemens)</div>
-            <div class="skill">Security Systems (CCTV, Access Control)</div>
-            <div class="skill">Active Directory</div>
-            <div class="skill">Microsoft Exchange</div>
-            <div class="skill">Data Backup</div>
+            <div class="skill bounce-in">Network Infrastructure Design</div>
+            <div class="skill bounce-in">Data Center Management</div>
+            <div class="skill bounce-in">Storage Solutions (Tape & SAN)</div>
+            <div class="skill bounce-in">Cybersecurity</div>
+            <div class="skill bounce-in">Network Administration</div>
+            <div class="skill bounce-in">Network Switches</div>
+            <div class="skill bounce-in">Network Engineering</div>
+            <div class="skill bounce-in">Project Management</div>
+            <div class="skill bounce-in">Technical Data Analysis</div>
+            <div class="skill bounce-in">IT Service Management</div>
+            <div class="skill bounce-in">Incident Management</div>
+            <div class="skill bounce-in">Change Management</div>
+            <div class="skill bounce-in">Service Level Management</div>
+            <div class="skill bounce-in">Network Security</div>
+            <div class="skill bounce-in">Information Security Management</div>
+            <div class="skill bounce-in">Risk Assessment</div>
+            <div class="skill bounce-in">Incident Response</div>
+            <div class="skill bounce-in">Intrusion Detection Systems</div>
+            <div class="skill bounce-in">Information Security Awareness</div>
+            <div class="skill bounce-in">Linux Kernel</div>
+            <div class="skill bounce-in">Linux System Administration</div>
+            <div class="skill bounce-in">Linux Network Administration</div>
+            <div class="skill bounce-in">Linux Security</div>
+            <div class="skill bounce-in">Cloud Computing</div>
+            <div class="skill bounce-in">Edge Computing</div>
+            <div class="skill bounce-in">Python (Programming Language)</div>
+            <div class="skill bounce-in">Cisco Equipment (Switches, Firewalls, Routers)</div>
+            <div class="skill bounce-in">Building Management Systems (Siemens)</div>
+            <div class="skill bounce-in">Security Systems (CCTV, Access Control)</div>
+            <div class="skill bounce-in">Active Directory</div>
+            <div class="skill bounce-in">Microsoft Exchange</div>
+            <div class="skill bounce-in">Data Backup</div>
         </div>
     </div>
 </div>
 
-<div class="certifications-section">
+<div class="certifications-section fade-in">
     <div class="container">
         <h2 class="section-title">Certifications</h2>
         <div class="section-content">
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>IPv6 Fundamentals - Analyst</h3>
                 <p><strong>RIPE NCC</strong> | Issued Dec 2024 · Expires Dec 2027</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Penetration Testing Professional Certificate</h3>
                 <p><strong>Cybrary</strong> | Issued Oct 2024</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Career Essentials in Cybersecurity</h3>
                 <p><strong>Microsoft and LinkedIn</strong> | Issued Sep 2024</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Data Center Design Certifications</h3>
                 <p><strong>TIAM Networks</strong> | Issued Jan 2022</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>LPIC-2</h3>
                 <p><strong>Arjang Institute of Higher Education</strong> | Issued Mar 2019</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>IT Project Management</h3>
                 <p><strong>Tehran Institute of Technology</strong> | Issued Sep 2018</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>ITSM</h3>
                 <p><strong>Tehran Institute of Technology</strong> | Issued Sep 2018</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Network and Information Security in Organizations</h3>
                 <p><strong>Tehran Institute of Technology</strong> | Issued Sep 2018</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Python Programming</h3>
                 <p><strong>University of Tehran</strong> | Issued Sep 2018 | Credential ID MK-7CVNKM</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Certified Ethical Hacker (CEH)</h3>
                 <p><strong>Arjang Institute of Higher Education</strong> | Issued Aug 2018</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>LPIC-1</h3>
                 <p><strong>Arjang Institute of Higher Education</strong> | Issued Aug 2018</p>
             </div>
-            <div class="certification">
+            <div class="certification bounce-in">
                 <h3>Cloud Computing</h3>
                 <p><strong>Tehran Institute of Technology</strong> | Issued Dec 2016</p>
             </div>
@@ -305,15 +482,15 @@
     </div>
 </div>
 
-<div class="languages-section">
+<div class="languages-section fade-in">
     <div class="container">
         <h2 class="section-title">Languages</h2>
         <div class="section-content">
-            <div class="language">
+            <div class="language bounce-in">
                 <h3>English</h3>
                 <p>Professional working proficiency</p>
             </div>
-            <div class="language">
+            <div class="language bounce-in">
                 <h3>German</h3>
                 <p>Elementary proficiency</p>
             </div>
@@ -321,18 +498,18 @@
     </div>
 </div>
 
-<div class="interests-section">
+<div class="interests-section fade-in">
     <div class="container">
         <h2 class="section-title">Interests</h2>
         <div class="section-content">
-            <div class="interest">Being a Google Maps guide and contributor</div>
-            <div class="interest">Exploring the world of mining and cryptocurrency</div>
-            <div class="interest">Capturing moments through photography</div>
+            <div class="interest bounce-in">Being a Google Maps guide and contributor</div>
+            <div class="interest bounce-in">Exploring the world of mining and cryptocurrency</div>
+            <div class="interest bounce-in">Capturing moments through photography</div>
         </div>
     </div>
 </div>
 
-<div class="contact-section">
+<div class="contact-section fade-in">
     <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="section-content">
