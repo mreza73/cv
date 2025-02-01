@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
@@ -70,6 +70,28 @@ header::after {
 
 .section-content {
     margin-bottom: 20px;
+}
+
+.project, .certification, .language, .interest {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 4px solid #4caf50;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.project:hover, .certification:hover, .language:hover, .interest:hover {
+    background-color: #2a2a2a;
+    border-color: #333;
+}
+
+.project h3, .certification h3, .language h3, .interest h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.project p, .certification p, .language p, .interest p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
 }
 
 .timeline {
@@ -160,7 +182,7 @@ header::after {
 
 .timeline-item h3 {
     margin: 0 0 10px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .timeline-item p {
@@ -274,15 +296,12 @@ header::after {
     .contact-info {
         flex-direction: row;
     }
-
     .timeline-item {
         width: 45%;
     }
-
     .timeline-item.left {
         left: 0;
     }
-
     .timeline-item.right {
         left: 50%;
     }
