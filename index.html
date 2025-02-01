@@ -9,13 +9,12 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #121212;
+            color: #ffffff;
             line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #1e1e1e;
             padding: 20px 0;
             text-align: center;
             position: relative;
@@ -27,7 +26,7 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background: linear-gradient(to bottom, rgba(76, 175, 80, 0.8), transparent);
+            background: linear-gradient(to bottom, rgba(30, 30, 30, 0.8), transparent);
             pointer-events: none;
         }
         .container {
@@ -35,62 +34,19 @@
             margin: 0 auto;
             overflow: hidden;
         }
-        .about-section {
+        .section {
             padding: 40px 0;
-            background-color: #fff;
+            background-color: #1e1e1e;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             margin-bottom: 20px;
+            transition: background-color 0.3s ease;
         }
-        .experience-section, .education-section, .skills-section, .certifications-section, .languages-section, .interests-section {
-            padding: 40px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .contact-section {
-            padding: 40px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-        .contact-info img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
-        }
-        .contact-info img:hover {
-            transform: scale(1.1);
-        }
-        .contact-info div {
-            text-align: center;
-        }
-        .social-media {
-            margin-top: 10px;
-        }
-        .social-media a {
-            margin: 0 10px;
-            color: #4CAF50;
-            text-decoration: none;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-        .social-media a:hover {
-            color: #333;
+        .section:hover {
+            background-color: #2a2a2a;
         }
         .section-title {
-            color: #4CAF50;
+            color: #4caf50;
             margin-bottom: 10px;
             position: relative;
         }
@@ -99,13 +55,13 @@
             position: absolute;
             left: 0;
             bottom: -5px;
-            width: 100%;
+            width: 0;
             height: 2px;
-            background-color: #4CAF50;
+            background-color: #4caf50;
             transition: width 0.3s ease;
         }
         .section-title:hover::after {
-            width: 50%;
+            width: 100%;
         }
         .section-content {
             margin-bottom: 20px;
@@ -113,11 +69,11 @@
         .project, .certification, .skill, .language, .interest {
             margin-bottom: 10px;
             padding: 10px;
-            border-left: 4px solid #4CAF50;
+            border-left: 4px solid #4caf50;
             transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         .project:hover, .certification:hover, .skill:hover, .language:hover, .interest:hover {
-            background-color: #f4f4f4;
+            background-color: #2a2a2a;
             border-color: #333;
         }
         .project h3, .certification h3, .skill h3, .language h3, .interest h3 {
@@ -140,7 +96,7 @@
             bottom: 0;
             left: 50%;
             width: 2px;
-            background-color: #4CAF50;
+            background-color: #4caf50;
         }
         .timeline-item {
             position: relative;
@@ -153,11 +109,15 @@
             width: 16px;
             height: 16px;
             right: -8px;
-            background-color: white;
-            border: 4px solid #4CAF50;
+            background-color: #1e1e1e;
+            border: 4px solid #4caf50;
             top: 8px;
             border-radius: 50%;
             z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+        .timeline-item:hover::after {
+            background-color: #2a2a2a;
         }
         .timeline-item.left {
             left: 0;
@@ -170,10 +130,14 @@
         }
         .timeline-item .content {
             padding: 20px 30px;
-            background-color: #fff;
+            background-color: #1e1e1e;
             position: relative;
             border-radius: 6px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .timeline-item:hover .content {
+            background-color: #2a2a2a;
         }
         .timeline-item .content::before {
             content: '';
@@ -186,12 +150,12 @@
         .timeline-item.left .content::before {
             right: -16px;
             border-width: 8px 16px 8px 0;
-            border-color: transparent #fff transparent transparent;
+            border-color: transparent #1e1e1e transparent transparent;
         }
         .timeline-item.right .content::before {
             left: -16px;
             border-width: 8px 0 8px 16px;
-            border-color: transparent transparent transparent #fff;
+            border-color: transparent transparent transparent #1e1e1e;
         }
         .timeline-item h3 {
             margin: 0 0 10px;
@@ -231,6 +195,56 @@
                 transform: scale(1);
             }
         }
+        .contact-section {
+            padding: 40px 0;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .contact-info img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .contact-info img:hover {
+            transform: scale(1.1);
+        }
+        .contact-info div {
+            text-align: center;
+        }
+        .social-media {
+            margin-top: 10px;
+        }
+        .social-media a {
+            margin: 0 10px;
+            color: #4caf50;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .social-media a:hover {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
@@ -243,7 +257,7 @@
     </div>
 </header>
 
-<div class="about-section fade-in">
+<div class="section about-section fade-in">
     <div class="container">
         <h2 class="section-title">About</h2>
         <div class="section-content">
@@ -255,7 +269,7 @@
     </div>
 </div>
 
-<div class="experience-section fade-in">
+<div class="section experience-section fade-in">
     <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="section-content">
@@ -366,7 +380,7 @@
     </div>
 </div>
 
-<div class="education-section fade-in">
+<div class="section education-section fade-in">
     <div class="container">
         <h2 class="section-title">Education</h2>
         <div class="section-content">
@@ -386,7 +400,7 @@
     </div>
 </div>
 
-<div class="skills-section fade-in">
+<div class="section skills-section fade-in">
     <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="section-content">
@@ -426,21 +440,24 @@
     </div>
 </div>
 
-<div class="certifications-section fade-in">
+<div class="section certifications-section fade-in">
     <div class="container">
         <h2 class="section-title">Certifications</h2>
         <div class="section-content">
             <div class="certification bounce-in">
                 <h3>IPv6 Fundamentals - Analyst</h3>
                 <p><strong>RIPE NCC</strong> | Issued Dec 2024 · Expires Dec 2027</p>
+                <a href="#" class="button">Show Credential</a>
             </div>
             <div class="certification bounce-in">
                 <h3>Penetration Testing Professional Certificate</h3>
                 <p><strong>Cybrary</strong> | Issued Oct 2024</p>
+                <a href="#" class="button">Show Credential</a>
             </div>
             <div class="certification bounce-in">
                 <h3>Career Essentials in Cybersecurity</h3>
                 <p><strong>Microsoft and LinkedIn</strong> | Issued Sep 2024</p>
+                <a href="#" class="button">Show Credential</a>
             </div>
             <div class="certification bounce-in">
                 <h3>Data Center Design Certifications</h3>
@@ -465,10 +482,12 @@
             <div class="certification bounce-in">
                 <h3>Python Programming</h3>
                 <p><strong>University of Tehran</strong> | Issued Sep 2018 | Credential ID MK-7CVNKM</p>
+                <a href="#" class="button">Show Credential</a>
             </div>
             <div class="certification bounce-in">
                 <h3>Certified Ethical Hacker (CEH)</h3>
                 <p><strong>Arjang Institute of Higher Education</strong> | Issued Aug 2018</p>
+                <a href="#" class="button">Show Credential</a>
             </div>
             <div class="certification bounce-in">
                 <h3>LPIC-1</h3>
@@ -482,7 +501,7 @@
     </div>
 </div>
 
-<div class="languages-section fade-in">
+<div class="section languages-section fade-in">
     <div class="container">
         <h2 class="section-title">Languages</h2>
         <div class="section-content">
@@ -498,7 +517,7 @@
     </div>
 </div>
 
-<div class="interests-section fade-in">
+<div class="section interests-section fade-in">
     <div class="container">
         <h2 class="section-title">Interests</h2>
         <div class="section-content">
@@ -509,7 +528,7 @@
     </div>
 </div>
 
-<div class="contact-section fade-in">
+<div class="section contact-section fade-in">
     <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="section-content">
