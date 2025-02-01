@@ -14,7 +14,7 @@
             const clientId = '86dhjev7zh9brx';
             const redirectUri = 'https://mreza73.github.io/cv/callback.html';
             const state = generateState(); // Generate a unique state value
-            const scope = 'r_liteprofile';
+            const scope = 'openid';
 
             const authorizationUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&state=${state}&scope=${scope}`;
             window.location.href = authorizationUrl;
