@@ -15,9 +15,11 @@
         }
         header {
             background-color: #1e1e1e;
+            color: white;
             padding: 20px 0;
             text-align: center;
             position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header::after {
             content: '';
@@ -49,6 +51,7 @@
             color: #4caf50;
             margin-bottom: 10px;
             position: relative;
+            cursor: pointer;
         }
         .section-title::after {
             content: '';
@@ -65,24 +68,6 @@
         }
         .section-content {
             margin-bottom: 20px;
-        }
-        .project, .certification, .skill, .language, .interest {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-left: 4px solid #4caf50;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        .project:hover, .certification:hover, .skill:hover, .language:hover, .interest:hover {
-            background-color: #2a2a2a;
-            border-color: #333;
-        }
-        .project h3, .certification h3, .skill h3, .language h3, .interest h3 {
-            margin: 0;
-            font-size: 1.2em;
-        }
-        .project p, .certification p, .skill p, .language p, .interest p {
-            margin: 5px 0 0;
-            font-size: 0.9em;
         }
         .timeline {
             list-style: none;
@@ -159,7 +144,7 @@
         }
         .timeline-item h3 {
             margin: 0 0 10px;
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
         .timeline-item p {
             margin: 0;
@@ -206,6 +191,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            flex-direction: column;
         }
         .contact-info img {
             width: 150px;
@@ -245,6 +231,24 @@
         .button:hover {
             background-color: #333;
         }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        @media (min-width: 768px) {
+            .contact-info {
+                flex-direction: row;
+            }
+            .timeline-item {
+                width: 45%;
+            }
+            .timeline-item.left {
+                left: 0;
+            }
+            .timeline-item.right {
+                left: 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -252,7 +256,7 @@
 <header>
     <div class="container">
         <h1>Mohamadreza Ghorbani</h1>
-        <p>IT & Low Voltage Systems Supervisor | Network & BMS Specialist | Cybersecurity Enthusiast | Skilled in Airport IT Infrastructure | Open to Global Opportunities 🏺</p>
+        <p>IT & Low Voltage Systems Supervisor | Network & BMS Specialist | Cybersecurity Enthusiast | Skilled in Airport IT Infrastructure | Open to Global Opportunities 🏺🌍</p>
         <p>Dubai, United Arab Emirates</p>
     </div>
 </header>
@@ -261,10 +265,10 @@
     <div class="container">
         <h2 class="section-title">About</h2>
         <div class="section-content">
-            <p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports. Adept at leading cross-functional teams through all project phases—from initial design and installation to ongoing optimization and maintenance—ensuring high performance and operational reliability.</p>
-            <p>Skilled in Network Infrastructure Design, Data Center Management, Storage Solutions (Tape & SAN), and Cybersecurity. Proven proficiency with Cisco equipment (switches, firewalls, routers), Building Management Systems (Siemens), and Security Systems (CCTV, Access Control). Experienced in implementing robust security measures, monitoring network integrity, and mitigating potential threats to safeguard sensitive systems.</p>
-            <p>Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures.</p>
-            <p>In addition to my professional experience, I am passionate about being a Google Maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography.</p>
+            <p>Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports. Adept at leading cross-functional teams through all project phases—from initial design and installation to ongoing optimization and maintenance—ensuring high performance and operational reliability. 🚀</p>
+            <p>Skilled in Network Infrastructure Design, Data Center Management, Storage Solutions (Tape & SAN), and Cybersecurity. Proven proficiency with Cisco equipment (switches, firewalls, routers), Building Management Systems (Siemens), and Security Systems (CCTV, Access Control). Experienced in implementing robust security measures, monitoring network integrity, and mitigating potential threats to safeguard sensitive systems. 🔒</p>
+            <p>Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures. 🎓</p>
+            <p>In addition to my professional experience, I am passionate about being a Google Maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography. 🗺️📸</p>
         </div>
     </div>
 </div>
@@ -280,21 +284,21 @@
                         <p><strong>Tolid Malzoomat Bargh (TMB)</strong> | Part-time | Dec 2022 - Present (2 yrs 3 mos)</p>
                         <p><strong>Kish Airport</strong> | On-site</p>
                         <ul>
-                            <li>Successfully led the implementation of critical low current systems for the new terminal at Kish International Airport.</li>
-                            <li>Managed and delivered large-scale infrastructure projects.</li>
+                            <li>Successfully led the implementation of critical low current systems for the new terminal at Kish International Airport. 🏠</li>
+                            <li>Managed and delivered large-scale infrastructure projects. 📈</li>
                             <li>Ensured seamless integration and high operational standards across multiple complex technologies, including:</li>
                             <ul>
-                                <li>Building Management Systems – Siemens</li>
-                                <li>Fire Alarm Systems – Siemens</li>
-                                <li>Network Infrastructure – Cisco</li>
-                                <li>Airport IT Systems – HPE, EMC & Sophos</li>
-                                <li>Access Control Systems – Bosch</li>
-                                <li>CCTV and Surveillance – Bosch</li>
-                                <li>Public address system - Bosch</li>
+                                <li>Building Management Systems – Siemens 🏢</li>
+                                <li>Fire Alarm Systems – Siemens 🔥</li>
+                                <li>Network Infrastructure – Cisco 🌐</li>
+                                <li>Airport IT Systems – HPE, EMC & Sophos 💻</li>
+                                <li>Access Control Systems – Bosch 🔑</li>
+                                <li>CCTV and Surveillance – Bosch 📹</li>
+                                <li>Public address system - Bosch 🗣️</li>
                             </ul>
-                            <li>Skilled in project planning, team coordination, and system commissioning.</li>
-                            <li>Focused on achieving optimal performance, safety, and compliance.</li>
-                            <li>Known for troubleshooting complex systems and streamlining operations.</li>
+                            <li>Skilled in project planning, team coordination, and system commissioning. 🤝</li>
+                            <li>Focused on achieving optimal performance, safety, and compliance. ✅</li>
+                            <li>Known for troubleshooting complex systems and streamlining operations. 🔍</li>
                         </ul>
                     </div>
                 </li>
@@ -304,12 +308,12 @@
                         <p><strong>Honar shahr aftab</strong> | Full-time | Jan 2022 - Present (3 yrs 2 mos)</p>
                         <p><strong>Kish Island</strong> | On-site</p>
                         <ul>
-                            <li>Oversaw a team tasked with designing, cabling, installing, and configuring a robust network infrastructure tailored to the unique needs of an international airport environment.</li>
-                            <li>Designed and built data center infrastructure, incorporating high-capacity Tape, SAN storage, and UTM systems to support critical airport operations.</li>
-                            <li>Led the implementation of complex network systems using industry-leading technologies such as Cisco switches, firewalls, routers, and Wi-Fi solutions.</li>
-                            <li>Managed the deployment of structured cabling systems and installation of core network equipment, adhering to industry best practices and safety standards.</li>
-                            <li>Ensured optimal network performance through regular monitoring, configuration management, and fine-tuning of the infrastructure.</li>
-                            <li>Implemented stringent compliance and security measures to meet both local and international standards for safety and operational reliability.</li>
+                            <li>Oversaw a team tasked with designing, cabling, installing, and configuring a robust network infrastructure tailored to the unique needs of an international airport environment. 🛠️</li>
+                            <li>Designed and built data center infrastructure, incorporating high-capacity Tape, SAN storage, and UTM systems to support critical airport operations. 💾</li>
+                            <li>Led the implementation of complex network systems using industry-leading technologies such as Cisco switches, firewalls, routers, and Wi-Fi solutions. 🌐</li>
+                            <li>Managed the deployment of structured cabling systems and installation of core network equipment, adhering to industry best practices and safety standards. 🔧</li>
+                            <li>Ensured optimal network performance through regular monitoring, configuration management, and fine-tuning of the infrastructure. 📈</li>
+                            <li>Implemented stringent compliance and security measures to meet both local and international standards for safety and operational reliability. 🔒</li>
                         </ul>
                     </div>
                 </li>
@@ -319,10 +323,10 @@
                         <p><strong>IRITCO</strong> | Full-time | May 2020 - May 2022 (2 yrs 1 mo)</p>
                         <p><strong>Kish Island, Iran</strong> | On-site</p>
                         <ul>
-                            <li>Responsible for leading a team of skilled professionals in managing comprehensive IT and network infrastructure projects from inception to completion.</li>
-                            <li>Handled the full spectrum of project activities, including design, implementation, and operational support.</li>
-                            <li>Ensured a seamless and high-performing network.</li>
-                            <li>Focused on leadership and project management, data center and storage solutions, network design and implementation, structured cabling and hardware deployment, system optimization and maintenance, and compliance and security.</li>
+                            <li>Responsible for leading a team of skilled professionals in managing comprehensive IT and network infrastructure projects from inception to completion. 🛠️</li>
+                            <li>Handled the full spectrum of project activities, including design, implementation, and operational support. 🛠️</li>
+                            <li>Ensured a seamless and high-performing network. 🌐</li>
+                            <li>Focused on leadership and project management, data center and storage solutions, network design and implementation, structured cabling and hardware deployment, system optimization and maintenance, and compliance and security. 🏢🔑🔧📈</li>
                         </ul>
                     </div>
                 </li>
@@ -336,41 +340,41 @@
                             <ul>
                                 <li>Installed, configured, and maintained critical systems, including:</li>
                                 <ul>
-                                    <li>Active Directory (DC) for domain control, file and printer sharing, and other DC roles.</li>
-                                    <li>Exchange Server for email management.</li>
-                                    <li>Elastix VOIP system for voice over IP communications.</li>
-                                    <li>VMware ESXi for virtualization and resource management.</li>
+                                    <li>Active Directory (DC) for domain control, file and printer sharing, and other DC roles. 🏢</li>
+                                    <li>Exchange Server for email management. 📧</li>
+                                    <li>Elastix VOIP system for voice over IP communications. 📞</li>
+                                    <li>VMware ESXi for virtualization and resource management. 💻</li>
                                 </ul>
-                                <li>Ensured the smooth operation of all passive and active network operations.</li>
+                                <li>Ensured the smooth operation of all passive and active network operations. 🌐🔧</li>
                             </ul>
                             <li>User Support:</li>
                             <ul>
-                                <li>Responded to user inquiries regarding computer software and hardware issues, providing timely and effective solutions.</li>
-                                <li>Set up and configured equipment for employee use, including the installation of cables, operating systems, and appropriate software.</li>
+                                <li>Responded to user inquiries regarding computer software and hardware issues, providing timely and effective solutions. 🛠️👥</li>
+                                <li>Set up and configured equipment for employee use, including the installation of cables, operating systems, and appropriate software. 🖥️🔌💻</li>
                             </ul>
                             <li>Hardware and Software Management:</li>
                             <ul>
-                                <li>Installed and performed minor repairs to hardware, software, and peripheral equipment.</li>
-                                <li>Adhered to design and installation specifications to ensure proper setup and functionality.</li>
+                                <li>Installed and performed minor repairs to hardware, software, and peripheral equipment. 🔧🛠️🔧</li>
+                                <li>Adhered to design and installation specifications to ensure proper setup and functionality. 📝🔍</li>
                             </ul>
                             <li>Network Configuration:</li>
                             <ul>
-                                <li>Configured wide area network (WAN) and local area network (LAN) routers and related equipment.</li>
-                                <li>Optimized network performance and ensured reliable connectivity.</li>
+                                <li>Configured wide area network (WAN) and local area network (LAN) routers and related equipment. 🌐🔧</li>
+                                <li>Optimized network performance and ensured reliable connectivity. 📈🌐</li>
                             </ul>
                             <li>Data Backup:</li>
                             <ul>
-                                <li>Regularly backed up network data to ensure data integrity and availability in case of emergencies.</li>
+                                <li>Regularly backed up network data to ensure data integrity and availability in case of emergencies. 💾🚨</li>
                             </ul>
                             <li>Connectivity Support:</li>
                             <ul>
-                                <li>Provided telephone support to resolve networking and connectivity issues, ensuring minimal downtime for users.</li>
+                                <li>Provided telephone support to resolve networking and connectivity issues, ensuring minimal downtime for users. 📞🌐🔧</li>
                             </ul>
                             <li>Achievements:</li>
                             <ul>
-                                <li>Successfully managed and maintained a robust IT infrastructure, contributing to the efficient operation of the company.</li>
-                                <li>Enhanced user productivity by promptly addressing and resolving technical issues.</li>
-                                <li>Implemented and maintained backup procedures, ensuring data safety and recovery capabilities.</li>
+                                <li>Successfully managed and maintained a robust IT infrastructure, contributing to the efficient operation of the company. 🚀🏠💻</li>
+                                <li>Enhanced user productivity by promptly addressing and resolving technical issues. 👥🛠️🔍</li>
+                                <li>Implemented and maintained backup procedures, ensuring data safety and recovery capabilities. 💾🚨🔧</li>
                             </ul>
                         </ul>
                     </div>
@@ -389,53 +393,13 @@
                 <p><strong>University of Tehran</strong> | 2018 - 2021</p>
                 <p><strong>Field of Study:</strong> Computer Networks</p>
                 <p><strong>Thesis:</strong> “Provide a Solution to Improve IoT Security Using New Technologies”</p>
-                <p>Conducted research focused on enhancing the security of IoT systems by implementing Blockchain technology. Supervised by Dr. Hossein Samimi and Prof. Ali Moeini.</p>
+                <p>Conducted research focused on enhancing the security of IoT systems by implementing Blockchain technology. Supervised by Dr. Hossein Samimi and Prof. Ali Moeini. 🎓🔍</p>
             </div>
             <div class="education bounce-in">
                 <h3>Bachelor's degree, Information Technology</h3>
                 <p><strong>Payame Noor University</strong> | 2013 - 2017</p>
-                <p><strong>Courses:</strong> C (Programming Language), Database Management System (DBMS)</p>
+                <p><strong>Courses:</strong> C (Programming Language), Database Management System (DBMS) 📘💻</p>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="section skills-section fade-in">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="section-content">
-            <div class="skill bounce-in">Network Infrastructure Design</div>
-            <div class="skill bounce-in">Data Center Management</div>
-            <div class="skill bounce-in">Storage Solutions (Tape & SAN)</div>
-            <div class="skill bounce-in">Cybersecurity</div>
-            <div class="skill bounce-in">Network Administration</div>
-            <div class="skill bounce-in">Network Switches</div>
-            <div class="skill bounce-in">Network Engineering</div>
-            <div class="skill bounce-in">Project Management</div>
-            <div class="skill bounce-in">Technical Data Analysis</div>
-            <div class="skill bounce-in">IT Service Management</div>
-            <div class="skill bounce-in">Incident Management</div>
-            <div class="skill bounce-in">Change Management</div>
-            <div class="skill bounce-in">Service Level Management</div>
-            <div class="skill bounce-in">Network Security</div>
-            <div class="skill bounce-in">Information Security Management</div>
-            <div class="skill bounce-in">Risk Assessment</div>
-            <div class="skill bounce-in">Incident Response</div>
-            <div class="skill bounce-in">Intrusion Detection Systems</div>
-            <div class="skill bounce-in">Information Security Awareness</div>
-            <div class="skill bounce-in">Linux Kernel</div>
-            <div class="skill bounce-in">Linux System Administration</div>
-            <div class="skill bounce-in">Linux Network Administration</div>
-            <div class="skill bounce-in">Linux Security</div>
-            <div class="skill bounce-in">Cloud Computing</div>
-            <div class="skill bounce-in">Edge Computing</div>
-            <div class="skill bounce-in">Python (Programming Language)</div>
-            <div class="skill bounce-in">Cisco Equipment (Switches, Firewalls, Routers)</div>
-            <div class="skill bounce-in">Building Management Systems (Siemens)</div>
-            <div class="skill bounce-in">Security Systems (CCTV, Access Control)</div>
-            <div class="skill bounce-in">Active Directory</div>
-            <div class="skill bounce-in">Microsoft Exchange</div>
-            <div class="skill bounce-in">Data Backup</div>
         </div>
     </div>
 </div>
@@ -447,21 +411,22 @@
             <div class="certification bounce-in">
                 <h3>IPv6 Fundamentals - Analyst</h3>
                 <p><strong>RIPE NCC</strong> | Issued Dec 2024 · Expires Dec 2027</p>
-                <a href="#" class="button">Show Credential</a>
+                <a href="#" class="button">Show Credential</a> 📄🔍
             </div>
             <div class="certification bounce-in">
                 <h3>Penetration Testing Professional Certificate</h3>
                 <p><strong>Cybrary</strong> | Issued Oct 2024</p>
-                <a href="#" class="button">Show Credential</a>
+                <a href="#" class="button">Show Credential</a> 📄🔍
             </div>
             <div class="certification bounce-in">
                 <h3>Career Essentials in Cybersecurity</h3>
                 <p><strong>Microsoft and LinkedIn</strong> | Issued Sep 2024</p>
-                <a href="#" class="button">Show Credential</a>
+                <a href="#" class="button">Show Credential</a> 📄🔍
             </div>
             <div class="certification bounce-in">
                 <h3>Data Center Design Certifications</h3>
                 <p><strong>TIAM Networks</strong> | Issued Jan 2022</p>
+                <a href="#" class="button">Show Credential</a> 📄🔍
             </div>
             <div class="certification bounce-in">
                 <h3>LPIC-2</h3>
