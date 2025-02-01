@@ -15,11 +15,9 @@
         }
         header {
             background-color: #1e1e1e;
-            color: white;
             padding: 20px 0;
             text-align: center;
             position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header::after {
             content: '';
@@ -51,7 +49,6 @@
             color: #4caf50;
             margin-bottom: 10px;
             position: relative;
-            cursor: pointer;
         }
         .section-title::after {
             content: '';
@@ -68,12 +65,6 @@
         }
         .section-content {
             margin-bottom: 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        .section-content.show {
-            max-height: 1000px; /* Adjust as needed */
         }
         .project, .certification, .skill, .language, .interest {
             margin-bottom: 10px;
@@ -254,17 +245,6 @@
         .button:hover {
             background-color: #333;
         }
-        .show-more-btn {
-            display: block;
-            margin: 20px 0;
-            color: #4caf50;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        .show-more-btn:hover {
-            color: #333;
-        }
     </style>
 </head>
 <body>
@@ -286,7 +266,6 @@
             <p>Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures.</p>
             <p>In addition to my professional experience, I am passionate about being a Google Maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography.</p>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -398,7 +377,6 @@
                 </li>
             </ul>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -419,7 +397,6 @@
                 <p><strong>Courses:</strong> C (Programming Language), Database Management System (DBMS)</p>
             </div>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -460,7 +437,6 @@
             <div class="skill bounce-in">Microsoft Exchange</div>
             <div class="skill bounce-in">Data Backup</div>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -522,7 +498,6 @@
                 <p><strong>Tehran Institute of Technology</strong> | Issued Dec 2016</p>
             </div>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -539,7 +514,6 @@
                 <p>Elementary proficiency</p>
             </div>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -551,7 +525,6 @@
             <div class="interest bounce-in">Exploring the world of mining and cryptocurrency</div>
             <div class="interest bounce-in">Capturing moments through photography</div>
         </div>
-        <a class="show-more-btn" onclick="toggleContent(this)">Show More</a>
     </div>
 </div>
 
@@ -575,26 +548,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    function toggleContent(btn) {
-        const sectionContent = btn.previousElementSibling;
-        if (sectionContent.classList.contains('show')) {
-            sectionContent.classList.remove('show');
-            btn.textContent = 'Show More';
-        } else {
-            sectionContent.classList.add('show');
-            btn.textContent = 'Show Less';
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.classList.add('fade-in');
-        });
-    });
-</script>
 
 </body>
 </html>
