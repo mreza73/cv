@@ -98,6 +98,8 @@ header::after {
     list-style: none;
     padding: 0;
     position: relative;
+    margin: 0 auto;
+    max-width: 80%;
 }
 
 .timeline::before {
@@ -106,8 +108,10 @@ header::after {
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 2px;
+    width: 4px;
     background-color: #4CAF50;
+    border-radius: 2px;
+    z-index: 1;
 }
 
 .timeline-item {
@@ -124,9 +128,9 @@ header::after {
     right: -8px;
     background-color: #ffffff;
     border: 4px solid #4CAF50;
-    top: 8px;
+    top: 16px;
     border-radius: 50%;
-    z-index: 1;
+    z-index: 2;
     transition: background-color 0.3s ease;
 }
 
