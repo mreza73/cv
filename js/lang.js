@@ -1,11 +1,4 @@
-// Function to manually hide the spinner if main.js hasn't
-function hideSpinner() {
-    const spinner = document.getElementById('spinner');
-    if (spinner && spinner.classList.contains('show')) {
-        console.log("lang.js attempting to hide spinner.");
-        spinner.classList.remove('show');
-    }
-}
+
 
 // Function to fetch language JSON and update content
 async function setLanguage(lang) {
