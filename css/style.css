@@ -1,112 +1,218 @@
-/*-----------------------------------*\
- * RTL LAYOUT STYLES
-\*-----------------------------------*/
-
-/* Basic RTL text alignment */
-.rtl-layout {
-  text-align: right;
-  direction: rtl;
+/********** Template CSS **********/
+:root {
+  --primary: #00B87B;
+  --secondary: #314355;
+  --light: #F2F2F2;
+  --dark: #2C3E50;
 }
 
-/* Apply Persian font when RTL is active */
-.rtl-layout body,
-.rtl-layout h1, .rtl-layout h2, .rtl-layout h3, .rtl-layout h4, .rtl-layout h5, .rtl-layout h6,
-.rtl-layout p, .rtl-layout span, .rtl-layout div, .rtl-layout a, .rtl-layout li, .rtl-layout button, .rtl-layout label, .rtl-layout small, .rtl-layout strong,
-.rtl-layout input::placeholder, .rtl-layout .typed-text-output {
-    font-family: 'Vazirmatn', sans-serif !important; /* Apply Persian font */
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
 }
 
-/* Adjust padding/margins for RTL */
-.rtl-layout .ps-1 { padding-right: .25rem !important; padding-left: 0 !important; }
-.rtl-layout .ps-2 { padding-right: .5rem !important; padding-left: 0 !important; }
-.rtl-layout .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
-.rtl-layout .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
-.rtl-layout .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
-
-.rtl-layout .pe-1 { padding-left: .25rem !important; padding-right: 0 !important; }
-.rtl-layout .pe-2 { padding-left: .5rem !important; padding-right: 0 !important; }
-.rtl-layout .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
-.rtl-layout .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
-.rtl-layout .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
-
-.rtl-layout .ms-1 { margin-right: .25rem !important; margin-left: 0 !important; }
-.rtl-layout .ms-2 { margin-right: .5rem !important; margin-left: 0 !important; }
-.rtl-layout .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
-.rtl-layout .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
-.rtl-layout .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
-
-.rtl-layout .me-1 { margin-left: .25rem !important; margin-right: 0 !important; }
-.rtl-layout .me-2 { margin-left: .5rem !important; margin-right: 0 !important; }
-.rtl-layout .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
-.rtl-layout .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
-.rtl-layout .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
-
-.rtl-layout .text-start { text-align: right !important; }
-.rtl-layout .text-end { text-align: left !important; }
-
-.rtl-layout .float-start { float: right !important; }
-.rtl-layout .float-end { float: left !important; }
-
-/* Adjust borders */
-.rtl-layout .border-start {
-    border-left: 0 !important;
-    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
 }
 
-.rtl-layout .border-end {
-    border-right: 0 !important;
-    border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+@media (max-width: 991.98px) {
+  .sticky-lg-top.vh-100 {
+    height: 100% !important;
+  }
 }
 
-/* Specific element adjustments for RTL */
-.rtl-layout .experience-timeline .position-relative .bi-arrow-right {
-    right: -50px; /* Use right instead of left */
-    left: auto;
-    transform: scaleX(-1); /* Flip the arrow */
-}
-.rtl-layout .service-item i { /* Center icons in RTL */
-    margin-left: auto;
-    margin-right: auto;
+.fw-semi-bold {
+  font-weight: 600;
 }
 
-/* Language Switcher Style */
-.language-switcher {
-    position: fixed; /* Use fixed positioning */
-    top: 15px;
-    right: 15px;
-    z-index: 1050;
-    background-color: rgba(40, 40, 40, 0.7); /* Slightly dark background */
-    padding: 5px 10px;
-    border-radius: 8px;
-    backdrop-filter: blur(2px); /* Optional: blur effect */
+.fw-medium {
+  font-weight: 500;
 }
 
-.language-switcher button {
-    margin: 0 3px;
-    padding: 4px 8px;
-    font-size: 0.85rem;
-    color: #eee; /* Light text */
-    background-color: transparent; /* Transparent background */
-    border: 1px solid transparent; /* No border initially */
-    border-radius: 5px;
-    opacity: 0.85;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+.btn-square {
+  width: 40px;
+  height: 40px;
 }
-.language-switcher button:hover {
-    opacity: 1;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1); /* Slight hover background */
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
 }
-.language-switcher button.active {
-    opacity: 1;
-    background-color: var(--primary); /* Use your primary color */
-    color: #fff; /* Ensure contrast */
-    font-weight: bold;
-    border-color: transparent;
+
+.btn-lg-square {
+  width: 50px;
+  height: 50px;
 }
-.language-switcher span { /* Style for the separator */
-    color: #aaa;
-    margin: 0 3px;
-    vertical-align: middle; /* Align separator better */
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-primary {
+  color: #FFFFFF;
+}
+
+.typed-cursor {
+  font-size: 25px;
+  color: var(--light);
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1;
+  font-size: 30px;
+  right: 30px;
+  bottom: 30px;
+  transition: background 0.5s;
+  z-index: 11;
+}
+
+.back-to-top i {
+  color: var(--primary);
+}
+
+.back-to-top i:hover {
+  color: var(--dark);
+}
+
+.back-to-top {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+}
+
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+.title {
+  position: relative;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: -4px;
+  left: 0;
+  border: 2px solid var(--light);
+  border-radius: 10px;
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  border-radius: 2px;
+  background: var(--light);
+}
+
+.progress {
+  height: 5px;
+}
+
+.progress .progress-bar {
+  width: 0px;
+  transition: 2s;
+}
+
+.service-item {
+  padding: 30px;
+  text-align: center;
+  background: var(--secondary);
+}
+
+.service-item i {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+  color: var(--primary);
+  transition: .5s;
+}
+
+.service-item:hover i {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.portfolio-item .portfolio-btn {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  font-size: 90px;
+  background: rgba(44, 62, 80, .9);
+  opacity: 0;
+  transition: .5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+  top: 30px;
+  left: 30px;
+}
+
+.portfolio-item i {
+  opacity: 0;
+  transition: .3s;
+  transition-delay: .3s;
+}
+
+.portfolio-item:hover i {
+  opacity: 1;
+}
+
+.testimonial-carousel .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.testimonial-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  background: var(--light);
+}
+
+.testimonial-carousel .owl-dot.active {
+  background: var(--primary);
 }
