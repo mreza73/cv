@@ -1,11 +1,24 @@
+// Function to manually hide the spinner if main.js hasn't
+function hideSpinner() {
+    const spinner = document.getElementById('spinner');
+    if (spinner && spinner.classList.contains('show')) {
+        console.log("lang.js attempting to hide spinner.");
+        spinner.classList.remove('show');
+    }
+}
+
 // Function to fetch language JSON and update content
 async function setLanguage(lang) {
+    let translations = null; // Initialize translations as null
     try {
-        const response = await fetch(`lang/${lang}.json?v=${Date.now()}`); // Add cache busting query param
+        console.log(`Attempting to fetch lang/${lang}.json`);
+        const response = await fetch(`lang/<span class="math-inline">\{lang\}\.json?v\=</span>{Date.now()}`); // Add cache busting query param
+        console.log(`Workspace status for ${lang}.json: ${response.status}`);
         if (!response.ok) {
            throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const translations = await response.json();
+        translations = await response.json();
+        console.log(`Successfully loaded and parsed ${lang}.json`);
 
         document.querySelectorAll('[data-translate]').forEach(element => {
             const key = element.getAttribute('data-translate');
@@ -26,14 +39,11 @@ async function setLanguage(lang) {
                      element.textContent = translationValue;
                  }
                  else {
-                    // Use innerHTML carefully, ensure JSON doesn't contain malicious script tags
-                    // For simple text, textContent is safer: element.textContent = translationValue;
+                    // Use innerHTML carefully
                     element.innerHTML = translationValue;
                 }
             } else {
                  console.warn(`Translation key "${key}" not found in ${lang}.json`);
-                 // Optionally set default text or leave as is
-                 // element.innerHTML = element.getAttribute('data-default-text') || '';
             }
         });
 
@@ -42,6 +52,7 @@ async function setLanguage(lang) {
          if (typedTextElement && typeof Typed !== 'undefined') {
              // Destroy previous instance if it exists
              if (window.typedInstance) {
+                 console.log("Destroying previous Typed instance.");
                  window.typedInstance.destroy();
              }
              // Create new strings array from translations
@@ -53,17 +64,28 @@ async function setLanguage(lang) {
                  translations['jobTitle5'] || ''
              ].filter(s => s); // Filter out any potentially missing translations
 
-             // Reinitialize Typed.js
-             const typed = new Typed('.typed-text-output', {
-                 strings: typedStrings,
-                 typeSpeed: 100, // Adjust speed as needed
-                 backSpeed: 20,
-                 smartBackspace: false,
-                 loop: true
-             });
-             window.typedInstance = typed; // Store instance to destroy later
+             if (typedStrings.length > 0) {
+                 // Reinitialize Typed.js only if there are strings
+                  console.log("Reinitializing Typed instance.");
+                 const typed = new Typed('.typed-text-output', {
+                     strings: typedStrings,
+                     typeSpeed: 100, // Adjust speed as needed
+                     backSpeed: 20,
+                     smartBackspace: false,
+                     loop: true
+                 });
+                 window.typedInstance = typed; // Store instance to destroy later
+             } else {
+                  console.warn("No strings found for Typed.js reinitialization.");
+                  // Clear the output if no strings
+                  const outputElement = document.querySelector('.typed-text-output');
+                  if (outputElement) outputElement.textContent = '';
+             }
+         } else {
+             console.log("Typed.js element or library not found.");
          }
          // --- End Typed.js handling ---
+
 
         // Update HTML lang attribute and text direction
         document.documentElement.lang = lang;
@@ -89,10 +111,17 @@ async function setLanguage(lang) {
         if (activeBtn) {
             activeBtn.classList.add('active');
         }
+        console.log(`Language successfully set to ${lang}.`);
 
     } catch (error) {
-        console.error("Could not load language file:", error);
-        // Optionally display an error message to the user
+        console.error("Error loading or applying language:", error);
+        // Display error to user? Maybe fallback to default lang?
+        // Ensure spinner can still be hidden even if translation fails
+    } finally {
+        // Attempt to hide spinner AFTER trying to set language, regardless of success/failure
+        // Use a small delay to allow main.js potential time first
+        setTimeout(hideSpinner, 100);
+        console.log("Language setting process finished (attempted).");
     }
 }
 
@@ -100,16 +129,20 @@ async function setLanguage(lang) {
 function getPreferredLanguage() {
     const savedLang = localStorage.getItem('language');
     if (savedLang && (savedLang === 'en' || savedLang === 'fa')) { // Validate stored language
+        console.log(`Using saved language: ${savedLang}`);
         return savedLang;
     }
-    // Default to English if browser language is not Persian
-    return navigator.language.startsWith('fa') ? 'fa' : 'en';
+    const browserLang = navigator.language || navigator.userLanguage; // More robust browser lang detection
+    const prefLang = browserLang.startsWith('fa') ? 'fa' : 'en';
+    console.log(`Using browser preference / default language: ${prefLang}`);
+    return prefLang;
 }
 
 // Set initial language on page load
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM Content Loaded. Initializing language setup.");
     const initialLang = getPreferredLanguage();
-    setLanguage(initialLang);
+    setLanguage(initialLang); // setLanguage now includes finally block with hideSpinner
 
     // Add event listeners to language buttons
     const btnEn = document.getElementById('lang-en');
@@ -119,16 +152,29 @@ document.addEventListener('DOMContentLoaded', () => {
         btnEn.addEventListener('click', (e) => {
             e.preventDefault();
             if (document.documentElement.lang !== 'en') { // Avoid unnecessary reloads
+               console.log("Switching language to English.");
                setLanguage('en');
             }
         });
+    } else {
+        console.warn("English language button #lang-en not found.");
     }
     if (btnFa) {
          btnFa.addEventListener('click', (e) => {
             e.preventDefault();
             if (document.documentElement.lang !== 'fa') { // Avoid unnecessary reloads
+               console.log("Switching language to Persian.");
                setLanguage('fa');
             }
         });
+    } else {
+        console.warn("Persian language button #lang-fa not found.");
     }
+});
+
+// Fallback: If main.js relies on window.load, try hiding spinner then too
+window.addEventListener('load', () => {
+     console.log("Window load event fired.");
+     // Give it a bit more time in case other load events are still processing
+     setTimeout(hideSpinner, 250);
 });
