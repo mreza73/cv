@@ -6,12 +6,8 @@
 <title>Mohamadreza Ghorbani - Personal CV</title>
 <meta content="//mreza.ghorbani.cloud/apple-touch-icon.png" property="og:image"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Mohamadreza Ghorbani - Personal CV" name="keywords"/>
-<meta content="Mohamadreza Ghorbani - Personal CV" name="description"/>
-<meta content="Mohamadreza Ghorbani - Personal CV" property="og:title"/>
-<meta content="https://mreza.ghorbani.cloud" property="og:url"/>
-<meta content="Mohamadreza Ghorbani - Personal CV" property="og:description"/>
-<link color="#aa0a00" href="/favicon.svg" rel="mask-icon"/>
+<meta content="محمدرضا قربانی - رزومه شخصی, سرپرست IT, متخصص شبکه, امنیت سایبری" name="keywords"/> <meta content="رزومه شخصی محمدرضا قربانی، سرپرست سیستم های جریان ضعیف و فناوری اطلاعات، متخصص شبکه و علاقه‌مند به امنیت سایبری." name="description"/> <meta content="محمدرضا قربانی - رزومه شخصی" property="og:title"/> <meta content="https://mreza.ghorbani.cloud" property="og:url"/>
+<meta content="رزومه شخصی محمدرضا قربانی، سرپرست سیستم های جریان ضعیف و فناوری اطلاعات." property="og:description"/> <link color="#aa0a00" href="/favicon.svg" rel="mask-icon"/>
 <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="/favicon.ico" rel="shortcut icon"/>
@@ -19,626 +15,591 @@
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <meta content="MReza Ghorbani" name="apple-mobile-web-app-title"/>
 <link href="/site.webmanifest" rel="manifest"/>
-<!-- Favicon 
-	<link rel="icon" type="image/x-icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-		-->
-<!-- Google Web Fonts -->
+
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Icon Font Stylesheet -->
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
-<!-- Libraries Stylesheet -->
-<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet"/> <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
 <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet"/>
 <link href="lib/animate/animate.min.css" rel="stylesheet"/>
-<!-- Customized Bootstrap Stylesheet -->
 <link href="css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Template Stylesheet -->
 <link href="css/style.css" rel="stylesheet"/>
 <style>
+  /* Base styles for language visibility */
+  .lang-fa { display: none; }
+  .lang-en { display: inline; } /* Default display */
+
+  /* RTL specific styles */
   body[dir="rtl"] {
     text-align: right;
     direction: rtl;
+    font-family: 'Vazirmatn', sans-serif !important; /* Apply Persian font */
   }
+   body[dir="rtl"] h1, body[dir="rtl"] h2, body[dir="rtl"] h3, body[dir="rtl"] h4, body[dir="rtl"] h5, body[dir="rtl"] h6,
+   body[dir="rtl"] p, body[dir="rtl"] span, body[dir="rtl"] div:not(.language-switcher):not(.progress), /* Avoid applying to switcher/progress */
+   body[dir="rtl"] a, body[dir="rtl"] li, body[dir="rtl"] button, body[dir="rtl"] label, body[dir="rtl"] small, body[dir="rtl"] strong,
+   body[dir="rtl"] input::placeholder, body[dir="rtl"] .typed-text-output {
+      font-family: 'Vazirmatn', sans-serif !important; /* Apply Persian font */
+   }
+  body[dir="rtl"] .lang-fa { display: inline; } /* Show Persian */
+  body[dir="rtl"] .lang-en { display: none; }  /* Hide English */
+
+   /* RTL Adjustments */
+  body[dir="rtl"] .ps-1 { padding-right: .25rem !important; padding-left: 0 !important; }
+  body[dir="rtl"] .ps-2 { padding-right: .5rem !important; padding-left: 0 !important; }
+  body[dir="rtl"] .ps-3 { padding-right: 1rem !important; padding-left: 0 !important; }
+  body[dir="rtl"] .ps-4 { padding-right: 1.5rem !important; padding-left: 0 !important; }
+  body[dir="rtl"] .ps-5 { padding-right: 3rem !important; padding-left: 0 !important; }
+
+  body[dir="rtl"] .pe-1 { padding-left: .25rem !important; padding-right: 0 !important; }
+  body[dir="rtl"] .pe-2 { padding-left: .5rem !important; padding-right: 0 !important; }
+  body[dir="rtl"] .pe-3 { padding-left: 1rem !important; padding-right: 0 !important; }
+  body[dir="rtl"] .pe-4 { padding-left: 1.5rem !important; padding-right: 0 !important; }
+  body[dir="rtl"] .pe-5 { padding-left: 3rem !important; padding-right: 0 !important; }
+
+  body[dir="rtl"] .ms-1 { margin-right: .25rem !important; margin-left: 0 !important; }
+  body[dir="rtl"] .ms-2 { margin-right: .5rem !important; margin-left: 0 !important; }
+  body[dir="rtl"] .ms-3 { margin-right: 1rem !important; margin-left: 0 !important; }
+  body[dir="rtl"] .ms-4 { margin-right: 1.5rem !important; margin-left: 0 !important; }
+  body[dir="rtl"] .ms-5 { margin-right: 3rem !important; margin-left: 0 !important; }
+
+  body[dir="rtl"] .me-1 { margin-left: .25rem !important; margin-right: 0 !important; }
+  body[dir="rtl"] .me-2 { margin-left: .5rem !important; margin-right: 0 !important; }
+  body[dir="rtl"] .me-3 { margin-left: 1rem !important; margin-right: 0 !important; }
+  body[dir="rtl"] .me-4 { margin-left: 1.5rem !important; margin-right: 0 !important; }
+  body[dir="rtl"] .me-5 { margin-left: 3rem !important; margin-right: 0 !important; }
+
+  body[dir="rtl"] .text-start { text-align: right !important; }
+  body[dir="rtl"] .text-end { text-align: left !important; }
+
+  body[dir="rtl"] .float-start { float: right !important; }
+  body[dir="rtl"] .float-end { float: left !important; }
+
+  body[dir="rtl"] .border-start {
+      border-left: 0 !important;
+      border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+  body[dir="rtl"] .border-end {
+      border-right: 0 !important;
+      border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+  body[dir="rtl"] .position-relative .bi-arrow-right {
+      right: -50px !important; /* Adjust arrow */
+      left: auto !important;
+      transform: scaleX(-1); /* Flip arrow */
+  }
+   body[dir="rtl"] .service-item i {
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+  /* LTR specific styles (optional, but good practice) */
   body[dir="ltr"] {
     text-align: left;
     direction: ltr;
+    /* font-family: 'Heebo', sans-serif; */ /* Assuming Heebo is default LTR font */
   }
+  body[dir="ltr"] .lang-fa { display: none; }
+  body[dir="ltr"] .lang-en { display: inline; }
+
+  /* Language switcher styling */
+  .language-switcher {
+    position: fixed; /* Keep it visible */
+    top: 15px;
+    right: 15px;
+    z-index: 1050;
+    background-color: rgba(40, 40, 40, 0.7);
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+  }
+  .language-switcher button {
+    margin: 0 3px;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    color: #eee;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    opacity: 0.85;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  .language-switcher button:hover {
+    opacity: 1;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  /* Style for the active button */
+   .language-switcher button.active {
+      opacity: 1;
+      background-color: var(--primary);
+      color: #fff;
+      font-weight: bold;
+      border-color: transparent;
+   }
+   .language-switcher span {
+      color: #aaa;
+      margin: 0 3px;
+      vertical-align: middle;
+   }
+
 </style>
-</link></met#aeb3b8et="utf-8"></head>
-<body>
-<div style="position: absolute; top: 20px; right: 20px; z-index: 999;">
-<button class="btn btn-sm btn-outline-primary" onclick="setLanguage('en')">English</button>
-<button class="btn btn-sm btn-outline-primary" onclick="setLanguage('fa')">فارسی</button>
-</div>
-<!-- Spinner Start -->
+</met#aeb3b8et="utf-8"></head>
+<body dir="ltr"> <div class="language-switcher"> <button class="btn btn-sm active" id="lang-en-btn" onclick="setLanguage('en')">English</button> <span>|</span>
+    <button class="btn btn-sm" id="lang-fa-btn" onclick="setLanguage('fa')">فارسی</button> </div>
 <div class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" id="spinner">
 <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
-<span class="sr-only">Loading...</span>
+    <span class="sr-only lang-en">Loading...</span>
+    <span class="sr-only lang-fa" style="display:none;">در حال بارگذاری...</span>
 </div>
 </div>
-<!-- Spinner End -->
 <div class="container">
 <div class="row g-5">
 <div class="col-lg-4 sticky-lg-top vh-100">
 <div class="d-flex flex-column h-100 text-center overflow-auto shadow">
-<!-- Profile Picture -->
 <img alt="Mohamadreza Ghorbani" class="w-100 img-fluid mb-4" src="img/profile.jpg"/>
-<!-- Name -->
-<h1 class="text-primary mt-2">Mohamadreza Ghorbani</h1>
-<!-- Job Titles -->
+<h1 class="text-primary mt-2">
+    <div class="lang-en">Mohamadreza Ghorbani</div>
+    <div class="lang-fa" style="display:none;">محمدرضا قربانی</div>
+</h1>
 <div class="mb-4" style="height: 22px;">
-<h4 class="typed-text-output d-inline-block text-light"></h4>
-<div class="typed-text d-none">
-                        IT and Low Voltage Systems Supervisor , Network Specialist , Cybersecurity Enthusiast , Skilled in Airport IT Infrastructure , Open to Global Opportunities
-                    </div>
+    <h4 class="typed-text-output d-inline-block text-light"></h4>
+    <div class="typed-text d-none"> <span data-lang="en">IT and Low Voltage Systems Supervisor</span><span data-lang="fa">سرپرست سیستم های جریان ضعیف و فناوری اطلاعات</span>,
+        <span data-lang="en">Network Specialist</span><span data-lang="fa">متخصص شبکه</span>,
+        <span data-lang="en">Cybersecurity Enthusiast</span><span data-lang="fa">علاقه‌مند به امنیت سایبری</span>,
+        <span data-lang="en">Skilled in Airport IT Infrastructure</span><span data-lang="fa">مهارت در زیرساخت فناوری اطلاعات فرودگاهی</span>,
+        <span data-lang="en">Open to Global Opportunities</span><span data-lang="fa">آماده برای فرصت‌های جهانی</span>
+    </div>
 </div>
-<!-- Social Media Links -->
 <div class="d-flex justify-content-center mt-auto mb-3">
-<!--  <a class="btn btn-secondary btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                  <!--  <a class="btn btn-secondary btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>  -->
-<a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/mrezagh" target="_blank"><i class="fab fa-2x fa-linkedin-in"></i></a>
-<a class="btn btn-secondary btn-square mx-1" href="https://github.com/mreza73" target="_blank"><i class="fab fa-2x fa-github"></i></a>
+<a class="btn btn-secondary btn-square mx-1" href="https://www.linkedin.com/in/mrezagh" target="_blank" aria-label="LinkedIn"><i class="fab fa-2x fa-linkedin-in"></i></a>
+<a class="btn btn-secondary btn-square mx-1" href="https://github.com/mreza73" target="_blank" aria-label="GitHub"><i class="fab fa-2x fa-github"></i></a>
 </div>
-<!-- Download CV and Contact Me Buttons -->
 <div class="d-flex align-items-end justify-content-between border-top">
 <a class="btn w-50 border-end" download="" href="mreza_cv.pdf">
-<div class="lang-en">Download CV</div>
-<div class="lang-fa" style="display:none;">دریافت رزومه</div>
+    <div class="lang-en">Download CV</div>
+    <div class="lang-fa" style="display:none;">دانلود رزومه</div>
 </a>
 <a class="btn w-50 btn-scroll" href="mailto:mreza@me.com">
-<div class="lang-en">Contact Me</div>
-<div class="lang-fa" style="display:none;">تماس با من</div>
+    <div class="lang-en">Contact Me</div>
+    <div class="lang-fa" style="display:none;">تماس با من</div>
 </a>
 </div>
 </div>
 </div>
 <div class="col-lg-8">
-<!-- About Start -->
-<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-<h1 class="title pb-3 mb-5">
-<span class="lang-en">About Me</span>
-<span class="lang-fa" style="display:none;">درباره من</span>
+<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="about"> <h1 class="title pb-3 mb-5">
+    <span class="lang-en">About Me</span>
+    <span class="lang-fa" style="display:none;">درباره من</span>
 </h1>
 <p>
-            Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports. Adept at leading cross-functional teams through all project phases—from initial design and installation to ongoing optimization and maintenance—ensuring high performance and operational reliability.
-            <br/><br/>
-            Skilled in Network Infrastructure Design, Data Center Management, Storage Solutions (Tape &amp; SAN), and Cybersecurity. Proven proficiency with Cisco equipment (switches, firewalls, routers), Building Management Systems (Siemens), and Security Systems (CCTV, Access Control). Experienced in implementing robust security measures, monitoring network integrity, and mitigating potential threats to safeguard sensitive systems.
-            <br/><br/>
-            Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures.
-            <br/><br/>
-            In addition to my professional experience, I am passionate about being a Google Maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography.
-        </p>
+    <span class="lang-en">Experienced IT Infrastructure Project Manager and Cybersecurity Specialist with a strong background in delivering large-scale network and IT solutions for mission-critical environments such as international airports. Adept at leading cross-functional teams through all project phases—from initial design and installation to ongoing optimization and maintenance—ensuring high performance and operational reliability.</span>
+    <span class="lang-fa" style="display:none;">مدیر پروژه زیرساخت فناوری اطلاعات و متخصص امنیت سایبری با تجربه، با سابقه قوی در ارائه راهکارهای شبکه و IT در مقیاس بزرگ برای محیط‌های حیاتی مانند فرودگاه‌های بین‌المللی. مهارت در رهبری تیم‌های چندوظیفه‌ای در تمام مراحل پروژه - از طراحی اولیه و نصب تا بهینه‌سازی و نگهداری مداوم - تضمین‌کننده عملکرد بالا و قابلیت اطمینان عملیاتی.</span>
+    <br/><br/>
+    <span class="lang-en">Skilled in Network Infrastructure Design, Data Center Management, Storage Solutions (Tape &amp; SAN), and Cybersecurity. Proven proficiency with Cisco equipment (switches, firewalls, routers), Building Management Systems (Siemens), and Security Systems (CCTV, Access Control). Experienced in implementing robust security measures, monitoring network integrity, and mitigating potential threats to safeguard sensitive systems.</span>
+    <span class="lang-fa" style="display:none;">مهارت در طراحی زیرساخت شبکه، مدیریت مرکز داده، راهکارهای ذخیره‌سازی (Tape & SAN) و امنیت سایبری. تسلط اثبات شده بر تجهیزات سیسکو (سوئیچ‌ها، فایروال‌ها، روترها)، سیستم‌های مدیریت ساختمان (زیمنس) و سیستم‌های امنیتی (دوربین مداربسته، کنترل دسترسی). تجربه در پیاده‌سازی اقدامات امنیتی قوی، نظارت بر یکپارچگی شبکه و کاهش تهدیدات بالقوه برای حفاظت از سیستم‌های حساس.</span>
+    <br/><br/>
+    <span class="lang-en">Holds a Master’s degree in Information Technology and a solid understanding of cybersecurity best practices, contributing to the design and deployment of secure, resilient, and scalable IT infrastructures.</span>
+    <span class="lang-fa" style="display:none;">دارای مدرک کارشناسی ارشد در فناوری اطلاعات و درک قوی از بهترین شیوه‌های امنیت سایبری، کمک به طراحی و استقرار زیرساخت‌های IT امن، پایدار و مقیاس‌پذیر.</span>
+    <br/><br/>
+    <span class="lang-en">In addition to my professional experience, I am passionate about being a Google Maps guide and contributor, exploring the world of mining and cryptocurrency, and capturing moments through photography.</span>
+    <span class="lang-fa" style="display:none;">علاوه بر تجربه حرفه‌ای، علاقه‌مند به فعالیت به عنوان راهنمای Google Maps و مشارکت‌کننده، کاوش در دنیای استخراج و رمزارزها و ثبت لحظات از طریق عکاسی هستم.</span>
+</p>
 <div class="row mb-4">
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Name:</span> Mohamadreza Ghorbani
-            </div>
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Degree:</span> Master of Science in Information Technology
-            </div>
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Experience:</span> 10+ Years
-            </div>
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Phone:</span> +989354055240
-            </div>
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Email:</span> mreza@me.com
-            </div>
-<div class="col-sm-6 py-1">
-<span class="fw-medium text-primary">Freelance:</span> Available
-            </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+            <span class="lang-en">Name:</span><span class="lang-fa" style="display:none;">نام:</span>
+        </span>
+        <span class="lang-en">Mohamadreza Ghorbani</span><span class="lang-fa" style="display:none;">محمدرضا قربانی</span>
+    </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+            <span class="lang-en">Degree:</span><span class="lang-fa" style="display:none;">مدرک:</span>
+        </span>
+        <span class="lang-en">Master of Science in Information Technology</span><span class="lang-fa" style="display:none;">کارشناسی ارشد فناوری اطلاعات</span>
+    </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+            <span class="lang-en">Experience:</span><span class="lang-fa" style="display:none;">سابقه:</span>
+        </span>
+        <span class="lang-en">10+ Years</span><span class="lang-fa" style="display:none;">+۱۰ سال</span>
+    </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+            <span class="lang-en">Phone:</span><span class="lang-fa" style="display:none;">تلفن:</span>
+        </span> +989354055240
+    </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+            <span class="lang-en">Email:</span><span class="lang-fa" style="display:none;">ایمیل:</span>
+        </span> mreza@me.com
+    </div>
+    <div class="col-sm-6 py-1">
+        <span class="fw-medium text-primary">
+             <span class="lang-en">Freelance:</span><span class="lang-fa" style="display:none;">فریلنس:</span>
+        </span>
+        <span class="lang-en">Available</span><span class="lang-fa" style="display:none;">آماده همکاری</span>
+    </div>
 </div>
 <div class="row g-4">
-<div class="col-md-4 col-lg-6 col-xl-4">
-<div class="d-flex bg-secondary p-4">
-<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">11</h1>
-<div class="ps-3">
-<p class="mb-0">Years of</p>
-<h5 class="mb-0">Experience</h5>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-lg-6 col-xl-4">
-<div class="d-flex bg-secondary p-4">
-<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">10</h1>
-<div class="ps-3">
-<p class="mb-0">Happy</p>
-<h5 class="mb-0">Clients</h5>
-</div>
-</div>
-</div>
-<div class="col-md-4 col-lg-6 col-xl-4">
-<div class="d-flex bg-secondary p-4">
-<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">17</h1>
-<div class="ps-3">
-<p class="mb-0">Complete</p>
-<h5 class="mb-0">Projects</h5>
-</div>
-</div>
-</div>
+    <div class="col-md-4 col-lg-6 col-xl-4">
+        <div class="d-flex bg-secondary p-4">
+            <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">11</h1>
+            <div class="ps-3">
+                <p class="mb-0">
+                    <span class="lang-en">Years of</span><span class="lang-fa" style="display:none;">سال</span>
+                </p>
+                <h5 class="mb-0">
+                    <span class="lang-en">Experience</span><span class="lang-fa" style="display:none;">سابقه</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-4">
+        <div class="d-flex bg-secondary p-4">
+            <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">10</h1>
+            <div class="ps-3">
+                <p class="mb-0">
+                    <span class="lang-en">Happy</span><span class="lang-fa" style="display:none;">مشتری</span>
+                </p>
+                <h5 class="mb-0">
+                    <span class="lang-en">Clients</span><span class="lang-fa" style="display:none;">راضی</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-lg-6 col-xl-4">
+        <div class="d-flex bg-secondary p-4">
+            <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">17</h1>
+            <div class="ps-3">
+                <p class="mb-0">
+                     <span class="lang-en">Complete</span><span class="lang-fa" style="display:none;">پروژه</span>
+                </p>
+                <h5 class="mb-0">
+                     <span class="lang-en">Projects</span><span class="lang-fa" style="display:none;">تکمیل شده</span>
+                </h5>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
-<!-- About End -->
-<!-- Skills Start -->
-<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-<h1 class="title pb-3 mb-5">
-<span class="lang-en">Skills</span>
-<span class="lang-fa" style="display:none;">مهارت‌ها</span>
+<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="skills"> <h1 class="title pb-3 mb-5">
+    <span class="lang-en">Skills</span>
+    <span class="lang-fa" style="display:none;">مهارت‌ها</span>
 </h1>
 <div class="row">
 <div class="col-sm-6">
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Network Infrastructure Design</p>
-<p class="mb-2">95%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar bg-primary" role="progressbar" style="width: 95%"></div>
-</div>
-</div>
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Data Center Management</p>
-<p class="mb-2">90%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar bg-warning" role="progressbar" style="width: 90%"></div>
-</div>
-</div>
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Cybersecurity</p>
-<p class="mb-2">90%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
-</div>
-</div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Network Infrastructure Design</span><span class="lang-fa" style="display:none;">طراحی زیرساخت شبکه</span>
+            </p>
+            <p class="mb-2">95%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar bg-primary" role="progressbar" style="width: 95%"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Data Center Management</span><span class="lang-fa" style="display:none;">مدیریت مرکز داده</span>
+            </p>
+            <p class="mb-2">90%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar bg-warning" role="progressbar" style="width: 90%"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Cybersecurity</span><span class="lang-fa" style="display:none;">امنیت سایبری</span>
+            </p>
+            <p class="mb-2">90%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar bg-danger" role="progressbar" style="width: 90%"></div>
+        </div>
+    </div>
 </div>
 <div class="col-sm-6">
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Linux System Administration</p>
-<p class="mb-2">85%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
-</div>
-</div>
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Python Programming</p>
-<p class="mb-2">75%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar bg-info" role="progressbar" style="width: 75%"></div>
-</div>
-</div>
-<div class="skill mb-4">
-<div class="d-flex justify-content-between">
-<p class="mb-2">Building Management Systems (BMS)</p>
-<p class="mb-2">85%</p>
-</div>
-<div class="progress">
-<div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
-</div>
-</div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Linux System Administration</span><span class="lang-fa" style="display:none;">مدیریت سیستم لینوکس</span>
+            </p>
+            <p class="mb-2">85%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Python Programming</span><span class="lang-fa" style="display:none;">برنامه نویسی پایتون</span>
+            </p>
+            <p class="mb-2">75%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar bg-info" role="progressbar" style="width: 75%"></div>
+        </div>
+    </div>
+    <div class="skill mb-4">
+        <div class="d-flex justify-content-between">
+            <p class="mb-2">
+                <span class="lang-en">Building Management Systems (BMS)</span><span class="lang-fa" style="display:none;">سیستم های مدیریت ساختمان (BMS)</span>
+            </p>
+            <p class="mb-2">85%</p>
+        </div>
+        <div class="progress">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" class="progress-bar bg-primary" role="progressbar" style="width: 85%"></div>
+        </div>
+    </div>
 </div>
 </div>
 </section>
-<!-- Skills End -->
-<!-- Experience Start -->
-<section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
-<h1 class="title pb-3 mb-5">
-<span class="lang-en">Experience</span>
-<span class="lang-fa" style="display:none;">سوابق کاری</span>
+<section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="experience"> <h1 class="title pb-3 mb-5">
+    <span class="lang-en">Experience</span>
+    <span class="lang-fa" style="display:none;">سوابق کاری</span>
 </h1>
 <div class="border-start border-2 border-light pt-2 ps-5">
-<!-- Tolid Malzoomat Bargh (TMB) -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">Low Current Systems Engineering Supervisor</h5>
-<p class="mb-2">Tolid Malzoomat Bargh (TMB) | <small>December 2022 - Present</small></p>
-<p>
-                Led implementation of critical low current systems at Kish International Airport, including Building Management Systems (Siemens), Fire Alarm Systems (Siemens), Network Infrastructure (Cisco), and CCTV/Access Control (Bosch). Ensured seamless integration and high operational standards.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">Low Current Systems Engineering Supervisor</span><span class="lang-fa" style="display:none;">سرپرست مهندسی سیستم‌های جریان ضعیف</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">Tolid Malzoomat Bargh (TMB)</span><span class="lang-fa" style="display:none;">تولید ملزومات برق (TMB)</span> | <small><span class="lang-en">December 2022 - Present</span><span class="lang-fa" style="display:none;">آذر ۱۴۰۱ - تاکنون</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Led implementation of critical low current systems at Kish International Airport, including Building Management Systems (Siemens), Fire Alarm Systems (Siemens), Network Infrastructure (Cisco), and CCTV/Access Control (Bosch). Ensured seamless integration and high operational standards.</span>
+        <span class="lang-fa" style="display:none;">رهبری پیاده‌سازی سیستم‌های حیاتی جریان ضعیف در فرودگاه بین‌المللی کیش، شامل سیستم‌های مدیریت ساختمان (زیمنس)، سیستم‌های اعلام حریق (زیمنس)، زیرساخت شبکه (سیسکو) و دوربین مداربسته/کنترل دسترسی (بوش). تضمین یکپارچگی بی‌نقص و استانداردهای عملیاتی بالا.</span>
+    </p>
 </div>
-<!-- Honar Shahr Aftab -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">Technical Manager</h5>
-<p class="mb-2">Honar Shahr Aftab | <small>January 2022 - January 2024</small></p>
-<p>
-                Managed the launch of Mica Cineplex, featuring three halls and advanced cinematic technologies (D-CINEMA, E-CINEMA, Qube DCP players). Integrated self-ticketing machines and smart automation systems to enhance efficiency and user experience.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">Technical Manager</span><span class="lang-fa" style="display:none;">مدیر فنی</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">Honar Shahr Aftab</span><span class="lang-fa" style="display:none;">هنر شهر آفتاب</span> | <small><span class="lang-en">January 2022 - January 2024</span><span class="lang-fa" style="display:none;">دی ۱۴۰۰ - دی ۱۴۰۲</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Managed the launch of Mica Cineplex, featuring three halls and advanced cinematic technologies (D-CINEMA, E-CINEMA, Qube DCP players). Integrated self-ticketing machines and smart automation systems to enhance efficiency and user experience.</span>
+        <span class="lang-fa" style="display:none;">مدیریت راه‌اندازی پردیس سینمایی میکا، با سه سالن و فناوری‌های پیشرفته سینمایی (D-CINEMA, E-CINEMA, Qube DCP players). یکپارچه‌سازی دستگاه‌های فروش خودکار بلیط و سیستم‌های اتوماسیون هوشمند برای افزایش کارایی و تجربه کاربر.</span>
+    </p>
 </div>
-<!-- IRITCO -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">Site Manager</h5>
-<p class="mb-2">IRITCO | <small>May 2020 - May 2022</small></p>
-<p>
-                Designed and implemented robust IT infrastructure for Kish International Airport, incorporating Data Center Solutions (Tape/SAN storage, UTM systems) and Cisco network technologies. Ensured optimal performance and security compliance.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">Site Manager</span><span class="lang-fa" style="display:none;">مدیر سایت</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">IRITCO</span><span class="lang-fa" style="display:none;">ایریتکو (IRITCO)</span> | <small><span class="lang-en">May 2020 - May 2022</span><span class="lang-fa" style="display:none;">اردیبهشت ۱۳۹۹ - اردیبهشت ۱۴۰۱</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Designed and implemented robust IT infrastructure for Kish International Airport, incorporating Data Center Solutions (Tape/SAN storage, UTM systems) and Cisco network technologies. Ensured optimal performance and security compliance.</span>
+        <span class="lang-fa" style="display:none;">طراحی و پیاده‌سازی زیرساخت قوی IT برای فرودگاه بین‌المللی کیش، با ترکیب راهکارهای مرکز داده (ذخیره‌سازی Tape/SAN، سیستم‌های UTM) و فناوری‌های شبکه سیسکو. تضمین عملکرد بهینه و انطباق با الزامات امنیتی.</span>
+    </p>
 </div>
-<!-- University of Tehran -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">IT Specialist</h5>
-<p class="mb-2">University of Tehran | <small>November 2018 - June 2020</small></p>
-<p>
-                Deployed VMware Horizon View VDI infrastructure, converted old hardware into PXE zero clients, and installed Ubiquiti UniFi Video Surveillance Systems. Created an immersive virtual tour of the university campus using GoPro Max and Pano2VR.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">IT Specialist</span><span class="lang-fa" style="display:none;">کارشناس فناوری اطلاعات</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">University of Tehran</span><span class="lang-fa" style="display:none;">دانشگاه تهران</span> | <small><span class="lang-en">November 2018 - June 2020</span><span class="lang-fa" style="display:none;">آبان ۱۳۹۷ - خرداد ۱۳۹۹</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Deployed VMware Horizon View VDI infrastructure, converted old hardware into PXE zero clients, and installed Ubiquiti UniFi Video Surveillance Systems. Created an immersive virtual tour of the university campus using GoPro Max and Pano2VR.</span>
+        <span class="lang-fa" style="display:none;">استقرار زیرساخت VDI با VMware Horizon View، تبدیل سخت‌افزارهای قدیمی به زیروکلاینت‌های PXE و نصب سیستم‌های نظارت تصویری UniFi یوبی‌کوئیتی. ایجاد تور مجازی فراگیر از پردیس دانشگاه با استفاده از GoPro Max و Pano2VR.</span>
+    </p>
 </div>
-<!-- Kishwood Industries -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">IT Systems Administrator</h5>
-<p class="mb-2">Kishwood Industries | <small>February 2013 - February 2018</small></p>
-<p>
-                Installed, configured, and maintained critical systems (Active Directory, Exchange Server, Elastix VOIP, VMware ESXi). Provided user support, optimized network performance, and ensured reliable connectivity through WAN/LAN configurations.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">IT Systems Administrator</span><span class="lang-fa" style="display:none;">مدیر سیستم‌های فناوری اطلاعات</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">Kishwood Industries</span><span class="lang-fa" style="display:none;">صنایع کیش‌وود</span> | <small><span class="lang-en">February 2013 - February 2018</span><span class="lang-fa" style="display:none;">بهمن ۱۳۹۱ - بهمن ۱۳۹۶</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Installed, configured, and maintained critical systems (Active Directory, Exchange Server, Elastix VOIP, VMware ESXi). Provided user support, optimized network performance, and ensured reliable connectivity through WAN/LAN configurations.</span>
+        <span class="lang-fa" style="display:none;">نصب، پیکربندی و نگهداری سیستم‌های حیاتی (Active Directory, Exchange Server, Elastix VOIP, VMware ESXi). ارائه پشتیبانی به کاربران، بهینه‌سازی عملکرد شبکه و تضمین اتصال پایدار از طریق پیکربندی‌های WAN/LAN.</span>
+    </p>
 </div>
 </div>
 </section>
-<!-- Experience End -->
-<!-- Education Start -->
-<section class="py-5 wow fadeInUp" data-wow-delay="0.1s">
-<h1 class="title pb-3 mb-5">
-<span class="lang-en">Education</span>
-<span class="lang-fa" style="display:none;">تحصیلات</span>
+<section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="education"> <h1 class="title pb-3 mb-5">
+    <span class="lang-en">Education</span>
+    <span class="lang-fa" style="display:none;">تحصیلات</span>
 </h1>
 <div class="border-start border-2 border-light pt-2 ps-5">
-<!-- University of Tehran - Master's Degree -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">Master of Science in Information Technology</h5>
-<p class="mb-2">University of Tehran | <small>2018 - 2021</small></p>
-<p>
-                Completed a rigorous program focusing on advanced IT concepts, including cybersecurity, network management, and data center solutions. Developed expertise in designing secure, resilient, and scalable IT infrastructures.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">Master of Science in Information Technology</span><span class="lang-fa" style="display:none;">کارشناسی ارشد فناوری اطلاعات</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">University of Tehran</span><span class="lang-fa" style="display:none;">دانشگاه تهران</span> | <small><span class="lang-en">2018 - 2021</span><span class="lang-fa" style="display:none;">۱۳۹۷ - ۱۴۰۰</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Completed a rigorous program focusing on advanced IT concepts, including cybersecurity, network management, and data center solutions. Developed expertise in designing secure, resilient, and scalable IT infrastructures.</span>
+        <span class="lang-fa" style="display:none;">تکمیل دوره تحصیلی دقیق با تمرکز بر مفاهیم پیشرفته فناوری اطلاعات، شامل امنیت سایبری، مدیریت شبکه و راهکارهای مرکز داده. توسعه تخصص در طراحی زیرساخت‌های IT امن، پایدار و مقیاس‌پذیر.</span>
+    </p>
 </div>
-<!-- Payame Noor University - Bachelor's Degree -->
 <div class="position-relative mb-4">
-<span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
-<h5 class="mb-1">Bachelor of Science in Information Technology</h5>
-<p class="mb-2">Payame Noor University | <small>2013 - 2017</small></p>
-<p>
-                Gained foundational knowledge in IT systems, software development, and network administration. Actively participated in projects that enhanced practical skills in system design and implementation.
-            </p>
+    <span class="bi bi-arrow-right fs-4 text-light position-absolute" style="top: -5px;"></span> <h5 class="mb-1">
+        <span class="lang-en">Bachelor of Science in Information Technology</span><span class="lang-fa" style="display:none;">کارشناسی فناوری اطلاعات</span>
+    </h5>
+    <p class="mb-2">
+        <span class="lang-en">Payame Noor University</span><span class="lang-fa" style="display:none;">دانشگاه پیام نور</span> | <small><span class="lang-en">2013 - 2017</span><span class="lang-fa" style="display:none;">۱۳۹۲ - ۱۳۹۶</span></small>
+    </p>
+    <p>
+        <span class="lang-en">Gained foundational knowledge in IT systems, software development, and network administration. Actively participated in projects that enhanced practical skills in system design and implementation.</span>
+        <span class="lang-fa" style="display:none;">کسب دانش بنیادین در سیستم‌های IT، توسعه نرم‌افزار و مدیریت شبکه. مشارکت فعال در پروژه‌هایی که مهارت‌های عملی در طراحی و پیاده‌سازی سیستم را افزایش داد.</span>
+    </p>
 </div>
 </div>
 </section>
-<!-- Education End -->
-<!-- Certifications Start -->
-<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-<h1 class="title pb-3 mb-5">
-<span class="lang-en">Certifications</span>
-<span class="lang-fa" style="display:none;">گواهینامه‌ها</span>
+<section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="certifications"> <h1 class="title pb-3 mb-5">
+    <span class="lang-en">Certifications</span>
+    <span class="lang-fa" style="display:none;">گواهینامه‌ها</span>
 </h1>
 <div class="row g-4">
-<!-- IPv6 Fundamentals - Analyst -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-server mx-auto mb-4"></i>
-<h5 class="mb-2">IPv6 Fundamentals - Analyst</h5>
-<p class="mb-0"><strong>Issued by:</strong> RIPE NCC | <small>Dec 2024 - Dec 2027</small><br/>Demonstrates expertise in IPv6 protocols, addressing schemes, and network configurations.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-server mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">IPv6 Fundamentals - Analyst</span><span class="lang-fa" style="display:none;">مبانی IPv6 - تحلیلگر</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">RIPE NCC</span><span class="lang-fa" style="display:none;">RIPE NCC</span> | <small><span class="lang-en">Dec 2024 - Dec 2027</span><span class="lang-fa" style="display:none;">آذر ۱۴۰۳ - آذر ۱۴۰۶</span></small><br/>
+        <span class="lang-en">Demonstrates expertise in IPv6 protocols, addressing schemes, and network configurations.</span><span class="lang-fa" style="display:none;">نشان‌دهنده تخصص در پروتکل‌های IPv6، طرح‌های آدرس‌دهی و پیکربندی‌های شبکه.</span></p>
+    </div>
 </div>
-</div>
-<!-- Penetration Testing Professional Certificate -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-shield-alt mx-auto mb-4"></i>
-<h5 class="mb-2">Penetration Testing Professional Certificate</h5>
-<p class="mb-0"><strong>Issued by:</strong> Cybrary | <small>Oct 2024</small><br/>Validates skills in ethical hacking, vulnerability assessment, and penetration testing methodologies.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-shield-alt mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Penetration Testing Professional Certificate</span><span class="lang-fa" style="display:none;">گواهینامه حرفه‌ای تست نفوذ</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Cybrary</span><span class="lang-fa" style="display:none;">سایبراری (Cybrary)</span> | <small><span class="lang-en">Oct 2024</span><span class="lang-fa" style="display:none;">مهر ۱۴۰۳</span></small><br/>
+        <span class="lang-en">Validates skills in ethical hacking, vulnerability assessment, and penetration testing methodologies.</span><span class="lang-fa" style="display:none;">تأیید مهارت‌ها در هک اخلاقی، ارزیابی آسیب‌پذیری و روش‌های تست نفوذ.</span></p>
+    </div>
 </div>
-</div>
-<!-- Career Essentials in Cybersecurity -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-lock mx-auto mb-4"></i>
-<h5 class="mb-2">Career Essentials in Cybersecurity</h5>
-<p class="mb-0"><strong>Issued by:</strong> Microsoft and LinkedIn | <small>Sep 2024</small><br/>Covers foundational cybersecurity concepts, threat management, and risk mitigation strategies.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-lock mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Career Essentials in Cybersecurity</span><span class="lang-fa" style="display:none;">مبانی ضروری امنیت سایبری</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Microsoft and LinkedIn</span><span class="lang-fa" style="display:none;">مایکروسافت و لینکدین</span> | <small><span class="lang-en">Sep 2024</span><span class="lang-fa" style="display:none;">شهریور ۱۴۰۳</span></small><br/>
+        <span class="lang-en">Covers foundational cybersecurity concepts, threat management, and risk mitigation strategies.</span><span class="lang-fa" style="display:none;">پوشش مفاهیم بنیادین امنیت سایبری، مدیریت تهدید و استراتژی‌های کاهش ریسک.</span></p>
+    </div>
 </div>
-</div>
-<!-- Data Center Design Certifications -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-building mx-auto mb-4"></i>
-<h5 class="mb-2">Data Center Design Certifications</h5>
-<p class="mb-0"><strong>Issued by:</strong> TIAM Networks | <small>Jan 2022</small><br/>Focuses on designing, constructing, and maintaining scalable and secure data center infrastructures.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-building mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Data Center Design Certifications</span><span class="lang-fa" style="display:none;">گواهینامه‌های طراحی مرکز داده</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">TIAM Networks</span><span class="lang-fa" style="display:none;">شبکه‌های تیام</span> | <small><span class="lang-en">Jan 2022</span><span class="lang-fa" style="display:none;">دی ۱۴۰۰</span></small><br/>
+        <span class="lang-en">Focuses on designing, constructing, and maintaining scalable and secure data center infrastructures.</span><span class="lang-fa" style="display:none;">تمرکز بر طراحی، ساخت و نگهداری زیرساخت‌های مرکز داده مقیاس‌پذیر و امن.</span></p>
+    </div>
 </div>
-</div>
-<!-- LPIC-2 -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-3x fa-brands fa-ubuntu mx-auto mb-4"></i>
-<h5 class="mb-2">LPIC-2</h5>
-<p class="mb-0"><strong>Issued by:</strong> Arjang Institute of Higher Education | <small>Mar 2019</small><br/>Validates advanced Linux system administration skills, including networking, security, and service management.</p>
+    <div class="service-item">
+        <i class="fa fa-3x fa-brands fa-ubuntu mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">LPIC-2</span><span class="lang-fa" style="display:none;">LPIC-2</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Arjang Institute of Higher Education</span><span class="lang-fa" style="display:none;">موسسه آموزش عالی ارژنگ</span> | <small><span class="lang-en">Mar 2019</span><span class="lang-fa" style="display:none;">اسفند ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Validates advanced Linux system administration skills, including networking, security, and service management.</span><span class="lang-fa" style="display:none;">تأیید مهارت‌های پیشرفته مدیریت سیستم لینوکس، شامل شبکه‌سازی، امنیت و مدیریت خدمات.</span></p>
+    </div>
 </div>
-</div>
-<!-- IT Project Management -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-chart-bar mx-auto mb-4"></i>
-<h5 class="mb-2">IT Project Management</h5>
-<p class="mb-0"><strong>Issued by:</strong> Tehran Institute of Technology | <small>Sep 2018</small><br/>Provides comprehensive knowledge of project planning, execution, and monitoring in IT environments.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-chart-bar mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">IT Project Management</span><span class="lang-fa" style="display:none;">مدیریت پروژه فناوری اطلاعات</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Tehran Institute of Technology</span><span class="lang-fa" style="display:none;">مجتمع فنی تهران</span> | <small><span class="lang-en">Sep 2018</span><span class="lang-fa" style="display:none;">شهریور ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Provides comprehensive knowledge of project planning, execution, and monitoring in IT environments.</span><span class="lang-fa" style="display:none;">ارائه دانش جامع برنامه‌ریزی، اجرا و نظارت بر پروژه در محیط‌های IT.</span></p>
+    </div>
 </div>
-</div>
-<!-- IT Service Management (ITSM) -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-cogs mx-auto mb-4"></i>
-<h5 class="mb-2">IT Service Management (ITSM)</h5>
-<p class="mb-0"><strong>Issued by:</strong> Tehran Institute of Technology | <small>Sep 2018</small><br/>Covers best practices for managing IT services, including incident, change, and service level management.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-cogs mx-auto mb-4"></i>
+        <h5 class="mb-2">
+             <span class="lang-en">IT Service Management (ITSM)</span><span class="lang-fa" style="display:none;">مدیریت خدمات فناوری اطلاعات (ITSM)</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Tehran Institute of Technology</span><span class="lang-fa" style="display:none;">مجتمع فنی تهران</span> | <small><span class="lang-en">Sep 2018</span><span class="lang-fa" style="display:none;">شهریور ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Covers best practices for managing IT services, including incident, change, and service level management.</span><span class="lang-fa" style="display:none;">پوشش بهترین شیوه‌ها برای مدیریت خدمات IT، شامل مدیریت رخداد، تغییر و سطح خدمات.</span></p>
+    </div>
 </div>
-</div>
-<!-- Network and Information Security in Organizations -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-network-wired mx-auto mb-4"></i>
-<h5 class="mb-2">Network and Information Security in Organizations</h5>
-<p class="mb-0"><strong>Issued by:</strong> Tehran Institute of Technology | <small>Sep 2018</small><br/>Focuses on securing networks, managing risks, and implementing robust information security policies.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-network-wired mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Network and Information Security in Organizations</span><span class="lang-fa" style="display:none;">امنیت شبکه و اطلاعات در سازمان‌ها</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Tehran Institute of Technology</span><span class="lang-fa" style="display:none;">مجتمع فنی تهران</span> | <small><span class="lang-en">Sep 2018</span><span class="lang-fa" style="display:none;">شهریور ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Focuses on securing networks, managing risks, and implementing robust information security policies.</span><span class="lang-fa" style="display:none;">تمرکز بر ایمن‌سازی شبکه‌ها، مدیریت ریسک‌ها و پیاده‌سازی سیاست‌های قوی امنیت اطلاعات.</span></p>
+    </div>
 </div>
-</div>
-<!-- Python Programming -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-code mx-auto mb-4"></i>
-<h5 class="mb-2">Python Programming</h5>
-<p class="mb-0"><strong>Issued by:</strong> University of Tehran | <small>Sep 2018</small><br/>Demonstrates proficiency in Python programming, including scripting, automation, and data manipulation.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-code mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Python Programming</span><span class="lang-fa" style="display:none;">برنامه نویسی پایتون</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">University of Tehran</span><span class="lang-fa" style="display:none;">دانشگاه تهران</span> | <small><span class="lang-en">Sep 2018</span><span class="lang-fa" style="display:none;">شهریور ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Demonstrates proficiency in Python programming, including scripting, automation, and data manipulation.</span><span class="lang-fa" style="display:none;">نشان‌دهنده تسلط بر برنامه‌نویسی پایتون، شامل اسکریپت‌نویسی، اتوماسیون و دستکاری داده‌ها.</span></p>
+    </div>
 </div>
-</div>
-<!-- Certified Ethical Hacker (CEH) -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-user-secret mx-auto mb-4"></i>
-<h5 class="mb-2">Certified Ethical Hacker (CEH)</h5>
-<p class="mb-0"><strong>Issued by:</strong> Arjang Institute of Higher Education | <small>Aug 2018</small><br/>Validates skills in identifying vulnerabilities, performing penetration tests, and safeguarding systems from cyber threats.</p>
+    <div class="service-item">
+        <i class="fa fa-2x fa-user-secret mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Certified Ethical Hacker (CEH)</span><span class="lang-fa" style="display:none;">هکر قانونمند (CEH)</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Arjang Institute of Higher Education</span><span class="lang-fa" style="display:none;">موسسه آموزش عالی ارژنگ</span> | <small><span class="lang-en">Aug 2018</span><span class="lang-fa" style="display:none;">مرداد ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Validates skills in identifying vulnerabilities, performing penetration tests, and safeguarding systems from cyber threats.</span><span class="lang-fa" style="display:none;">تأیید مهارت‌ها در شناسایی آسیب‌پذیری‌ها، انجام تست‌های نفوذ و حفاظت از سیستم‌ها در برابر تهدیدات سایبری.</span></p>
+    </div>
 </div>
-</div>
-<!-- LPIC-1 -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-3x fa-brands fa-linux mx-auto mb-4"></i>
-<h5 class="mb-2">LPIC-1</h5>
-<p class="mb-0"><strong>Issued by:</strong> Arjang Institute of Higher Education | <small>Aug 2018</small><br/>Validates fundamental Linux system administration skills, including installation, configuration, and basic troubleshooting.</p>
+    <div class="service-item">
+        <i class="fa fa-3x fa-brands fa-linux mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">LPIC-1</span><span class="lang-fa" style="display:none;">LPIC-1</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Arjang Institute of Higher Education</span><span class="lang-fa" style="display:none;">موسسه آموزش عالی ارژنگ</span> | <small><span class="lang-en">Aug 2018</span><span class="lang-fa" style="display:none;">مرداد ۱۳۹۷</span></small><br/>
+        <span class="lang-en">Validates fundamental Linux system administration skills, including installation, configuration, and basic troubleshooting.</span><span class="lang-fa" style="display:none;">تأیید مهارت‌های بنیادین مدیریت سیستم لینوکس، شامل نصب، پیکربندی و عیب‌یابی اولیه.</span></p>
+    </div>
 </div>
-</div>
-<!-- Cloud Computing -->
 <div class="col-md-6">
-<div class="service-item">
-<i class="fa fa-2x fa-cloud mx-auto mb-4"></i>
-<h5 class="mb-2">Cloud Computing</h5>
-<p class="mb-0"><strong>Issued by:</strong> Tehran Institute of Technology | <small>Dec 2016</small><br/>Provides foundational knowledge of cloud computing technologies, architectures, and deployment strategies.</p>
-</div>
+    <div class="service-item">
+        <i class="fa fa-2x fa-cloud mx-auto mb-4"></i>
+        <h5 class="mb-2">
+            <span class="lang-en">Cloud Computing</span><span class="lang-fa" style="display:none;">رایانش ابری</span>
+        </h5>
+        <p class="mb-0"><strong><span class="lang-en">Issued by:</span><span class="lang-fa" style="display:none;">صادر کننده:</span></strong> <span class="lang-en">Tehran Institute of Technology</span><span class="lang-fa" style="display:none;">مجتمع فنی تهران</span> | <small><span class="lang-en">Dec 2016</span><span class="lang-fa" style="display:none;">آذر ۱۳۹۵</span></small><br/>
+        <span class="lang-en">Provides foundational knowledge of cloud computing technologies, architectures, and deployment strategies.</span><span class="lang-fa" style="display:none;">ارائه دانش بنیادین فناوری‌های رایانش ابری، معماری‌ها و استراتژی‌های استقرار.</span></p>
+    </div>
 </div>
 </div>
 </section>
-<!-- Certifications End -->
-<!-- Subscribe Start 
-                    <section class="wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="bg-secondary text-center p-5">
-                            <h1 class="text-white font-weight-bold">Subscribe My Newsletter</h1>
-                            <p class="text-white">Subscribe and get my latest article in your inbox</p>
-                            <div class="position-relative w-100">
-                                <input class="form-control bg-dark border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                                <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
-                            </div>
-                        </div>
-                    </section>
-                    Subscribe End -->
-<!-- Services Start 
-                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="title pb-3 mb-5">Services</h1>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <i class="fa fa-2x fa-laptop-code mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Web Design</h5>
-                                    <p class="mb-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <i class="fab fa-2x fa-android mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Apps Development</h5>
-                                    <p class="mb-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <i class="fa fa-2x fa-search mx-auto mb-4"></i>
-                                    <h5 class="mb-2">SEO</h5>
-                                    <p class="mb-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-item">
-                                    <i class="fa fa-2x fa-edit mx-auto mb-4"></i>
-                                    <h5 class="mb-2">Content Creating</h5>
-                                    <p class="mb-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Services End -->
-<!-- Portfolio Start --
-                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="title pb-3 mb-5">Portfolio</h1>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-12 text-center mb-2">
-                                        <ul class="list-inline mb-4" id="portfolio-flters">
-                                            <li class="btn btn-secondary active"  data-filter="*"><i class="fa fa-star me-2"></i>All</li>
-                                            <li class="btn btn-secondary" data-filter=".first"><i class="fa fa-laptop-code me-2"></i>Design</li>
-                                            <li class="btn btn-secondary" data-filter=".second"><i class="fa fa-mobile-alt me-2"></i>Development</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row portfolio-container">
-                                    <div class="col-md-6 mb-4 portfolio-item first">
-                                        <div class="position-relative overflow-hidden mb-2">
-                                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                                            <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                                    <i class="bi bi-plus text-light"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4 portfolio-item second">
-                                        <div class="position-relative overflow-hidden mb-2">
-                                            <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                                            <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                                    <i class="bi bi-plus text-light"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4 portfolio-item first">
-                                        <div class="position-relative overflow-hidden mb-2">
-                                            <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                                            <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                                    <i class="bi bi-plus text-light"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4 portfolio-item second">
-                                        <div class="position-relative overflow-hidden mb-2">
-                                            <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                                            <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                                <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                                    <i class="bi bi-plus text-light"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Portfolio End -->
-<!-- Testimonial Start --
-                    <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="title pb-3 mb-5">Testimonial</h1>
-                        <div class="owl-carousel testimonial-carousel">
-                            <div class="text-left">
-                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                <p class="fs-4 mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</p>
-                                <div class="d-flex align-items-center">
-                                    <img class="img-fluid" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
-                                    <div class="ps-3">
-                                        <p class="text-primary fs-5 mb-1">Client Name</p>
-                                        <i>Profession</i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-left">
-                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                <p class="fs-4 mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</p>
-                                <div class="d-flex align-items-center">
-                                    <img class="img-fluid" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;">
-                                    <div class="ps-3">
-                                        <p class="text-primary fs-5 mb-1">Client Name</p>
-                                        <i>Profession</i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-left">
-                                <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                <p class="fs-4 mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</p>
-                                <div class="d-flex align-items-center">
-                                    <img class="img-fluid" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;">
-                                    <div class="ps-3">
-                                        <p class="text-primary fs-5 mb-1">Client Name</p>
-                                        <i>Profession</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Testimonial End -->
-<!-- Contact Start --
-                    <section class="py-5 wow fadeInUp" data-wow-delay="0.1s" id="contact">
-                        <h1 class="title pb-3 mb-5">Contact Me</h1>
-						<p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a></p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control border-0 bg-secondary" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0 bg-secondary" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </section>
-                    <!-- Contact End -->
-<!-- Footer Start -->
 <section class="wow fadeIn" data-wow-delay="0.1s">
 <div class="bg-secondary text-light text-center p-5">
 <div class="d-flex justify-content-center mb-4">
-<!--/***   <a class="btn btn-dark btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                        	<!--/***  <a class="btn btn-dark btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a> ***/-->
-<a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/mrezagh" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-<a class="btn btn-dark btn-square mx-1" href="https://github.com/mreza73" target="_blank"><i class="fab fa-github"></i></a>
+    <a class="btn btn-dark btn-square mx-1" href="https://www.linkedin.com/in/mrezagh" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a class="btn btn-dark btn-square mx-1" href="https://github.com/mreza73" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
 </div>
-<!--
-                            <div class="d-flex justify-content-center mb-3">
-                                <a class="text-light px-3 border-end" href="#">Privacy</a>
-                                <a class="text-light px-3 border-end" href="#">Terms</a>
-                                <a class="text-light px-3 border-end" href="#">FAQs</a>
-                                <a class="text-light px-3" href="#">Help</a>
-                            </div>
-							
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-<!--/***	<p class="m-0">&copy; All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p> ***/-->
 </div>
 </section>
-<!-- Footer End -->
 </div>
 </div>
 </div>
-<!-- Back to Top -->
-<a class="back-to-top" href="#" title=""><i class="fa fa-angle-double-up"></i>
-<span class="lang-en" style="display:none;">Back to Top</span>
-<span class="lang-fa">بازگشت به بالا</span>
-</a>
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<a class="back-to-top" href="#" title="Back to Top"><i class="fa fa-angle-double-up"></i></a> <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script src="lib/wow/wow.min.js"></script>
 <script src="lib/typed/typed.min.js"></script>
@@ -648,45 +609,111 @@
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
-<!-- Contact Javascript File -->
-<script src="mail/jqBootstrapValidation.min.js"></script>
-<script src="mail/contact.js"></script>
-<!-- Template Javascript -->
 <script src="js/main.js"></script>
 <script>
+  // Basic translation mapping (only for section titles used in the original script)
   const translations = {
     en: {
       about: "About Me",
       skills: "Skills",
       experience: "Experience",
       education: "Education",
-      certifications: "Certifications"
+      certifications: "Certifications",
+      // Typed.js strings
+      jobTitles: [
+          "IT and Low Voltage Systems Supervisor",
+          "Network Specialist",
+          "Cybersecurity Enthusiast",
+          "Skilled in Airport IT Infrastructure",
+          "Open to Global Opportunities"
+      ]
     },
     fa: {
       about: "درباره من",
       skills: "مهارت‌ها",
       experience: "سوابق کاری",
       education: "تحصیلات",
-      certifications: "گواهینامه‌ها"
+      certifications: "گواهینامه‌ها",
+       // Typed.js strings
+      jobTitles: [
+          "سرپرست سیستم های جریان ضعیف و فناوری اطلاعات",
+          "متخصص شبکه",
+          "علاقه‌مند به امنیت سایبری",
+          "مهارت در زیرساخت فناوری اطلاعات فرودگاهی",
+          "آماده برای فرصت‌های جهانی"
+      ]
     }
   };
 
+  let currentLang = 'en'; // Default language
+  let typedInstance = null; // To hold the Typed.js instance
+
   function setLanguage(lang) {
-    document.documentElement.lang = lang;
-    document.body.dir = lang === 'fa' ? 'rtl' : 'ltr';
+    if(lang === currentLang) return; // Don't do anything if language is already set
 
-    const titles = document.querySelectorAll('section h1.title');
-    if (titles.length > 0) {
-      titles[0].textContent = translations[lang].about;
-      titles[1].textContent = translations[lang].skills;
-      titles[2].textContent = translations[lang].experience;
-      titles[3].textContent = translations[lang].education;
-      titles[4].textContent = translations[lang].certifications;
-    }
-  }
+    currentLang = lang;
+    document.documentElement.lang = lang; // Set lang on <html>
+    document.body.dir = lang === 'fa' ? 'rtl' : 'ltr'; // Set body direction
 
+    // Toggle visibility based on lang class
     document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
     document.querySelectorAll('.lang-fa').forEach(el => el.style.display = lang === 'fa' ? '' : 'none');
-    </script>
+
+     // Re-initialize Typed.js with translated strings
+     const typedElement = document.querySelector('.typed-text');
+     if (typedElement && typeof Typed !== 'undefined' && translations[lang] && translations[lang].jobTitles) {
+         if (typedInstance) {
+             typedInstance.destroy(); // Destroy previous instance
+         }
+         typedInstance = new Typed('.typed-text-output', {
+             strings: translations[lang].jobTitles,
+             typeSpeed: 100,
+             backSpeed: 20,
+             smartBackspace: false,
+             loop: true
+         });
+     }
+
+     // Update active button state
+     document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
+     const activeBtn = document.getElementById(`lang-${lang}-btn`);
+     if (activeBtn) activeBtn.classList.add('active');
+
+     // --- Original title switching logic (kept as is from user file, but might be redundant) ---
+     const titles = document.querySelectorAll('section h1.title'); // Selects specific titles only
+     const sectionIds = ['about', 'skills', 'experience', 'education', 'certifications']; // IDs added to sections
+     titles.forEach((title, index) => {
+         const sectionId = title.closest('section')?.id; // Find parent section ID
+         if (sectionId && translations[lang][sectionId]) {
+             // Find the correct span within the title and update its text if needed
+             // This part is tricky because the original JS just set textContent on the H1
+             // For compatibility, we'll keep the spans but ensure the correct one is shown by the general class toggling above.
+             // The original title setting logic below is likely NOT needed anymore due to the general lang-en/lang-fa toggle.
+             // title.textContent = translations[lang][sectionId]; // Original logic - commented out
+         } else if (translations[lang][sectionIds[index]]) { // Fallback using index if ID not found
+            // title.textContent = translations[lang][sectionIds[index]]; // Original logic - commented out
+         }
+     });
+     // --- End of original title switching logic ---
+  }
+
+  // Initialize Typed.js on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', (event) => {
+     // Initial Typed.js setup
+     if (typeof Typed !== 'undefined' && translations[currentLang] && translations[currentLang].jobTitles) {
+       typedInstance = new Typed('.typed-text-output', {
+           strings: translations[currentLang].jobTitles,
+           typeSpeed: 100,
+           backSpeed: 20,
+           smartBackspace: false,
+           loop: true
+       });
+     }
+      // Set initial language based on browser or default
+      // Simplified: starts with English ('en') as set in body tag
+      setLanguage(document.documentElement.lang || 'en');
+  });
+
+</script>
 </body>
 </html>
