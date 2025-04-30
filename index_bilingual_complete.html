@@ -610,10 +610,16 @@
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
 <script src="js/main.js"></script>
-  <script>
-  // Translations Store including Typed.js strings
+<script>
+  // Basic translation mapping (only for section titles used in the original script)
   const translations = {
     en: {
+      about: "About Me",
+      skills: "Skills",
+      experience: "Experience",
+      education: "Education",
+      certifications: "Certifications",
+      // Typed.js strings
       jobTitles: [
           "IT and Low Voltage Systems Supervisor",
           "Network Specialist",
@@ -621,9 +627,14 @@
           "Skilled in Airport IT Infrastructure",
           "Open to Global Opportunities"
       ]
-      // Add other keys if needed by other parts of JS later
     },
     fa: {
+      about: "درباره من",
+      skills: "مهارت‌ها",
+      experience: "سوابق کاری",
+      education: "تحصیلات",
+      certifications: "گواهینامه‌ها",
+       // Typed.js strings
       jobTitles: [
           "سرپرست سیستم های جریان ضعیف و فناوری اطلاعات",
           "متخصص شبکه",
@@ -631,98 +642,78 @@
           "مهارت در زیرساخت فناوری اطلاعات فرودگاهی",
           "آماده برای فرصت‌های جهانی"
       ]
-      // Add other keys if needed by other parts of JS later
     }
   };
 
-  let currentLang = document.documentElement.lang || 'en'; // Set initial language based on HTML tag or default to 'en'
+  let currentLang = 'en'; // Default language
   let typedInstance = null; // To hold the Typed.js instance
 
-  // Function to initialize or re-initialize Typed.js
-  function initTyped(lang) {
-      // Ensure Typed library is loaded
-      if (typeof Typed === 'undefined') {
-          console.error("Typed.js library not loaded.");
-          return;
-      }
-
-      // Check if translations for the language and jobTitles exist
-      if (!translations[lang] || !translations[lang].jobTitles) {
-           console.error("Translation strings for Typed.js missing for language:", lang);
-           // Clear the output if strings are missing
-           const outputElement = document.querySelector('.typed-text-output');
-           if (outputElement) outputElement.textContent = '';
-           return;
-      }
-
-      // Destroy previous instance IF it exists
-      if (typedInstance) {
-          try {
-              typedInstance.destroy();
-              console.log("Previous Typed instance destroyed.");
-          } catch (e) {
-              console.error("Error destroying previous Typed instance:", e);
-          }
-      } else {
-           console.log("No previous Typed instance to destroy.");
-      }
-
-
-      // Create new instance with strings for the selected language
-       console.log("Initializing Typed.js for language:", lang);
-      typedInstance = new Typed('.typed-text-output', {
-          strings: translations[lang].jobTitles,
-          typeSpeed: 100,
-          backSpeed: 20,
-          smartBackspace: false,
-          loop: true
-      });
-  }
-
   function setLanguage(lang) {
-    if(lang === currentLang && typedInstance) return; // Don't re-apply if language hasn't changed AND instance exists
+    if(lang === currentLang) return; // Don't do anything if language is already set
 
-    console.log(`Setting language to: ${lang}`);
     currentLang = lang;
     document.documentElement.lang = lang; // Set lang on <html>
     document.body.dir = lang === 'fa' ? 'rtl' : 'ltr'; // Set body direction
 
-    // CSS handles the showing/hiding of .lang-en / .lang-fa elements via body[dir]
+    // Toggle visibility based on lang class
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-fa').forEach(el => el.style.display = lang === 'fa' ? '' : 'none');
 
-    // Update active button state
-    document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
-    const activeBtn = document.getElementById(`lang-${lang}-btn`);
-    if (activeBtn) activeBtn.classList.add('active');
+     // Re-initialize Typed.js with translated strings
+     const typedElement = document.querySelector('.typed-text');
+     if (typedElement && typeof Typed !== 'undefined' && translations[lang] && translations[lang].jobTitles) {
+         if (typedInstance) {
+             typedInstance.destroy(); // Destroy previous instance
+         }
+         typedInstance = new Typed('.typed-text-output', {
+             strings: translations[lang].jobTitles,
+             typeSpeed: 100,
+             backSpeed: 20,
+             smartBackspace: false,
+             loop: true
+         });
+     }
 
-    // Re-initialize Typed.js with the new language strings
-    initTyped(lang);
+     // Update active button state
+     document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
+     const activeBtn = document.getElementById(`lang-${lang}-btn`);
+     if (activeBtn) activeBtn.classList.add('active');
+
+     // --- Original title switching logic (kept as is from user file, but might be redundant) ---
+     const titles = document.querySelectorAll('section h1.title'); // Selects specific titles only
+     const sectionIds = ['about', 'skills', 'experience', 'education', 'certifications']; // IDs added to sections
+     titles.forEach((title, index) => {
+         const sectionId = title.closest('section')?.id; // Find parent section ID
+         if (sectionId && translations[lang][sectionId]) {
+             // Find the correct span within the title and update its text if needed
+             // This part is tricky because the original JS just set textContent on the H1
+             // For compatibility, we'll keep the spans but ensure the correct one is shown by the general class toggling above.
+             // The original title setting logic below is likely NOT needed anymore due to the general lang-en/lang-fa toggle.
+             // title.textContent = translations[lang][sectionId]; // Original logic - commented out
+         } else if (translations[lang][sectionIds[index]]) { // Fallback using index if ID not found
+            // title.textContent = translations[lang][sectionIds[index]]; // Original logic - commented out
+         }
+     });
+     // --- End of original title switching logic ---
   }
 
-  // Initial setup on DOMContentLoaded
+  // Initialize Typed.js on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', (event) => {
-      console.log("DOM Loaded. Performing initial language setup.");
-      // Set initial direction and active button based on currentLang determined at the top
-      document.body.dir = currentLang === 'fa' ? 'rtl' : 'ltr';
-      document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
-      const initialActiveBtn = document.getElementById(`lang-${currentLang}-btn`);
-      if (initialActiveBtn) initialActiveBtn.classList.add('active');
-
-      // Initial Typed.js setup
-      // Make sure Typed.js library is loaded before calling initTyped
-      if (typeof Typed !== 'undefined') {
-         initTyped(currentLang);
-      } else {
-         console.error("Typed.js not available on DOMContentLoaded");
-         // Optionally, try again after a short delay or on window.load
-      }
-
-     // Trigger spinner removal logic from main.js if needed, or hide manually
-     // This assumes main.js spinner logic runs correctly after its own initialization
-     // If spinner still stuck, uncomment the line below:
-     // setTimeout(() => { if ($('#spinner').length > 0) $('#spinner').removeClass('show'); }, 100);
+     // Initial Typed.js setup
+     if (typeof Typed !== 'undefined' && translations[currentLang] && translations[currentLang].jobTitles) {
+       typedInstance = new Typed('.typed-text-output', {
+           strings: translations[currentLang].jobTitles,
+           typeSpeed: 100,
+           backSpeed: 20,
+           smartBackspace: false,
+           loop: true
+       });
+     }
+      // Set initial language based on browser or default
+      // Simplified: starts with English ('en') as set in body tag
+      setLanguage(document.documentElement.lang || 'en');
   });
 
 </script>
-  
 </body>
 </html>
