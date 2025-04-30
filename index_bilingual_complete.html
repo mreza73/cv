@@ -621,8 +621,8 @@
 <script src="lib/isotope/isotope.pkgd.min.js"></script>
 <script src="lib/lightbox/js/lightbox.min.js"></script>
 <script src="js/main.js"></script>
-<script>
-  // Translations Store (Simplified for Typed.js)
+  <script>
+  // Translations Store including Typed.js strings
   const translations = {
     en: {
       jobTitles: [
@@ -632,6 +632,7 @@
           "Skilled in Airport IT Infrastructure",
           "Open to Global Opportunities"
       ]
+      // Add other keys if needed by other parts of JS later
     },
     fa: {
       jobTitles: [
@@ -641,49 +642,68 @@
           "مهارت در زیرساخت فناوری اطلاعات فرودگاهی",
           "آماده برای فرصت‌های جهانی"
       ]
+      // Add other keys if needed by other parts of JS later
     }
   };
 
-  let currentLang = 'en'; // Default language
+  let currentLang = document.documentElement.lang || 'en'; // Set initial language based on HTML tag or default to 'en'
   let typedInstance = null; // To hold the Typed.js instance
 
   // Function to initialize or re-initialize Typed.js
   function initTyped(lang) {
-      if (typeof Typed !== 'undefined' && translations[lang] && translations[lang].jobTitles) {
-          // Destroy previous instance IF it exists
-          if (typedInstance) {
-              typedInstance.destroy();
-          }
-          // Create new instance with strings for the selected language
-          typedInstance = new Typed('.typed-text-output', {
-              strings: translations[lang].jobTitles,
-              typeSpeed: 100,
-              backSpeed: 20,
-              smartBackspace: false,
-              loop: true
-          });
-      } else {
-          console.error("Typed.js library not loaded or translation strings missing for:", lang);
-          // Clear the output if Typed.js cannot be initialized
-          const outputElement = document.querySelector('.typed-text-output');
-          if (outputElement) outputElement.textContent = '';
+      // Ensure Typed library is loaded
+      if (typeof Typed === 'undefined') {
+          console.error("Typed.js library not loaded.");
+          return;
       }
+
+      // Check if translations for the language and jobTitles exist
+      if (!translations[lang] || !translations[lang].jobTitles) {
+           console.error("Translation strings for Typed.js missing for language:", lang);
+           // Clear the output if strings are missing
+           const outputElement = document.querySelector('.typed-text-output');
+           if (outputElement) outputElement.textContent = '';
+           return;
+      }
+
+      // Destroy previous instance IF it exists
+      if (typedInstance) {
+          try {
+              typedInstance.destroy();
+              console.log("Previous Typed instance destroyed.");
+          } catch (e) {
+              console.error("Error destroying previous Typed instance:", e);
+          }
+      } else {
+           console.log("No previous Typed instance to destroy.");
+      }
+
+
+      // Create new instance with strings for the selected language
+       console.log("Initializing Typed.js for language:", lang);
+      typedInstance = new Typed('.typed-text-output', {
+          strings: translations[lang].jobTitles,
+          typeSpeed: 100,
+          backSpeed: 20,
+          smartBackspace: false,
+          loop: true
+      });
   }
 
   function setLanguage(lang) {
-    if(lang === currentLang) return; // Don't re-apply if language hasn't changed
+    if(lang === currentLang && typedInstance) return; // Don't re-apply if language hasn't changed AND instance exists
 
+    console.log(`Setting language to: ${lang}`);
     currentLang = lang;
     document.documentElement.lang = lang; // Set lang on <html>
     document.body.dir = lang === 'fa' ? 'rtl' : 'ltr'; // Set body direction
 
-    // Toggle visibility based on lang class using CSS (handled by body[dir] rules)
-    // No need for manual style setting here anymore if CSS is set up correctly
+    // CSS handles the showing/hiding of .lang-en / .lang-fa elements via body[dir]
 
-     // Update active button state
-     document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
-     const activeBtn = document.getElementById(`lang-${lang}-btn`);
-     if (activeBtn) activeBtn.classList.add('active');
+    // Update active button state
+    document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.getElementById(`lang-${lang}-btn`);
+    if (activeBtn) activeBtn.classList.add('active');
 
     // Re-initialize Typed.js with the new language strings
     initTyped(lang);
@@ -691,22 +711,26 @@
 
   // Initial setup on DOMContentLoaded
   document.addEventListener('DOMContentLoaded', (event) => {
-      // Set default language attributes (can be overridden by user selection later)
-      const initialLang = document.documentElement.lang || 'en';
-      currentLang = initialLang; // Set initial currentLang
-      document.body.dir = initialLang === 'fa' ? 'rtl' : 'ltr';
-
-      // Update button state for initial load
-       document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
-       const initialActiveBtn = document.getElementById(`lang-${initialLang}-btn`);
-       if (initialActiveBtn) initialActiveBtn.classList.add('active');
+      console.log("DOM Loaded. Performing initial language setup.");
+      // Set initial direction and active button based on currentLang determined at the top
+      document.body.dir = currentLang === 'fa' ? 'rtl' : 'ltr';
+      document.querySelectorAll('.language-switcher button').forEach(btn => btn.classList.remove('active'));
+      const initialActiveBtn = document.getElementById(`lang-${currentLang}-btn`);
+      if (initialActiveBtn) initialActiveBtn.classList.add('active');
 
       // Initial Typed.js setup
-      initTyped(initialLang);
+      // Make sure Typed.js library is loaded before calling initTyped
+      if (typeof Typed !== 'undefined') {
+         initTyped(currentLang);
+      } else {
+         console.error("Typed.js not available on DOMContentLoaded");
+         // Optionally, try again after a short delay or on window.load
+      }
 
-      // Initial display based on default language (handled by CSS)
-      // document.querySelectorAll('.lang-en').forEach(el => el.style.display = initialLang === 'en' ? '' : 'none');
-      // document.querySelectorAll('.lang-fa').forEach(el => el.style.display = initialLang === 'fa' ? '' : 'none');
+     // Trigger spinner removal logic from main.js if needed, or hide manually
+     // This assumes main.js spinner logic runs correctly after its own initialization
+     // If spinner still stuck, uncomment the line below:
+     // setTimeout(() => { if ($('#spinner').length > 0) $('#spinner').removeClass('show'); }, 100);
   });
 
 </script>
